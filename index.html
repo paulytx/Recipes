@@ -239,6 +239,10 @@ function recipeText(r) {
 const BOOK_URL = "https://paulytx.github.io/recipes/";
 function linkFor(r) { return BOOK_URL + "r/" + r.id + "/" }
 function shareMsg(t) { const m = $("#share-msg"); if (m) m.textContent = t }
+function sendLink(r) {
+  if (!navigator.share) return copyLink(r);
+  navigator.share({ title: r.title, url: linkFor(r) }).catch(e => { if (e?.name !== "AbortError") copyLink(r) });
+}
 async function copyLink(r) {
   try { await navigator.clipboard.writeText(linkFor(r)); shareMsg("Link copied. Paste it into a text."); }
   catch {
@@ -375,7 +379,7 @@ function renderRecipe(r) {
     </div>
     <div class="share" id="share-panel" ${shareOpen ? "" : "hidden"}>
       <p>Copy link sends a link that opens straight to this recipe. The PDF and text options use the servings and units shown above.</p>
-      <button data-sharelink>Copy link</button>
+      <button data-sharelink>Send link</button>
       <button data-sharepdf ${canSave === false ? "hidden" : ""}>Save as PDF</button>
       <button data-sharecopy>Copy as text</button>
       <span class="msg" id="share-msg" role="status"></span>
@@ -476,8 +480,8 @@ document.addEventListener("click", e => {
   else if (t.dataset.units) { units = t.dataset.units; store.set("units", units); renderRecipe(r); tick() }
   else if (t.dataset.timer) toggleTimer(r, +t.dataset.timer);
   else if (t.dataset.clear) { delete timers[t.dataset.clear]; tick() }
-  else if (t.hasAttribute("data-share")) { shareOpen = !shareOpen; t.setAttribute("aria-expanded", shareOpen); $("#share-panel").hidden = !shareOpen; shareMsg("") }
-  else if (t.hasAttribute("data-sharelink")) copyLink(r);
+  else if (t.hasAttribute("data-share")) { shareOpen = !shareOpen; t.setAttribute("aria-expanded", shareOpen); $("#share-panel").hidden = !shareOpen; shareMsg(""); if (shareOpen) sendLink(r) }
+  else if (t.hasAttribute("data-sharelink")) sendLink(r);
   else if (t.hasAttribute("data-sharecopy")) copyRecipe(r);
   else if (t.hasAttribute("data-sharepdf")) savePDF(r);
   else if (t.hasAttribute("data-closecook")) closeCook();
