@@ -14,15 +14,17 @@ open(os.path.join(root, "index.html"), "w", encoding="utf-8").write(page)
 shutil.rmtree(os.path.join(root, "r"), ignore_errors=True)
 for r in recipes:
     e = lambda s: html.escape(s, quote=True)
-    img = f'<meta property="og:image" content="{e(site + r["image"])}"><meta name="twitter:card" content="summary_large_image">' if r.get("image") else ""
-    target = f'../../#s/{r["id"]}'
+    url = site + "r/" + r["id"] + "/"
+    meta = (f'<base href="../../"><title>{e(r["title"])}</title>'
+            f'<meta name="description" content="{e(r.get("description",""))}">'
+            f'<meta property="og:type" content="article"><meta property="og:site_name" content="Pauly\'s Recipe Book">'
+            f'<meta property="og:title" content="{e(r["title"])}"><meta property="og:description" content="{e(r.get("description",""))}">'
+            f'<meta property="og:url" content="{e(url)}">')
+    if r.get("image"):
+        meta += (f'<meta property="og:image" content="{e(site + r["image"])}"><meta property="og:image:width" content="1000">'
+                 f'<meta name="twitter:card" content="summary_large_image">')
+    meta += f'<script>if(!location.hash)history.replaceState(null,"",location.pathname+"#s/{r["id"]}")</script>'
+    rp = page.replace("<title>Pauly's Recipe Book</title>", "", 1).replace("<meta charset=utf8>", "<meta charset=utf8>" + meta, 1)
     d = os.path.join(root, "r", r["id"]); os.makedirs(d)
-    open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(f'''<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
-<title>{e(r["title"])}</title><meta name="description" content="{e(r.get("description",""))}">
-<meta property="og:type" content="article"><meta property="og:site_name" content="Pauly's Recipe Book">
-<meta property="og:title" content="{e(r["title"])}"><meta property="og:description" content="{e(r.get("description",""))}">
-<meta property="og:url" content="{e(site + "r/" + r["id"] + "/")}">{img}
-<meta http-equiv="refresh" content="0; url={target}"><script>location.replace("{target}")</script>
-</head><body><p><a href="{target}">Open {e(r["title"])}</a></p></body></html>''')
+    open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(rp)
 print(f"Built {len(recipes)} recipes for {site}")

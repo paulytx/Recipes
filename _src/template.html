@@ -241,7 +241,7 @@ function linkFor(r) { return BOOK_URL + "r/" + r.id + "/" }
 function shareMsg(t) { const m = $("#share-msg"); if (m) m.textContent = t }
 function sendLink(r) {
   if (!navigator.share) return copyLink(r);
-  navigator.share({ title: r.title, url: linkFor(r) }).catch(e => { if (e?.name !== "AbortError") copyLink(r) });
+  navigator.share({ url: linkFor(r) }).catch(e => { if (e?.name !== "AbortError") copyLink(r) });
 }
 async function copyLink(r) {
   try { await navigator.clipboard.writeText(linkFor(r)); shareMsg("Link copied. Paste it into a text."); }
