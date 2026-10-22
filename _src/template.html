@@ -1,0 +1,502 @@
+<!doctype html><html><head><meta charset=utf8><meta name="robots" content="noindex,nofollow"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Pauly's Recipe Book</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: kitchen binder — index of recipe cards → recipe sheet (ingredients rail + numbered method) → full-screen cook mode */
+:root {
+  --bg: #f6f7f2;
+  --surface: #ffffff;
+  --sunk: #eceee5;
+  --fg: #23271d;
+  --muted: #646a59;
+  --line: #d9dccf;
+  --accent: #4d6a2a;
+  --accent-soft: #e3ead6;
+  --on-accent: #ffffff;
+  --warm: #b4532a;
+  --display: "Young Serif", Georgia, "Times New Roman", serif;
+  --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #171912; --surface: #20231a; --sunk: #2a2e22; --fg: #ecefe3; --muted: #a3a993;
+  --line: #3a3f30; --accent: #a9c97c; --accent-soft: #33402a; --on-accent: #172010; --warm: #e88a5e; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #171912; --surface: #20231a; --sunk: #2a2e22; --fg: #ecefe3; --muted: #a3a993;
+  --line: #3a3f30; --accent: #a9c97c; --accent-soft: #33402a; --on-accent: #172010; --warm: #e88a5e; color-scheme: dark }
+
+* { box-sizing: border-box }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding-inline: 16px; padding-block: 20px 120px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; text-wrap: balance; margin: 0; line-height: 1.15 }
+button { font: inherit; color: inherit; cursor: pointer }
+button:focus-visible, input:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+.label { font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted) }
+
+/* ---------- index ---------- */
+.masthead { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px; padding-block: 8px 20px; border-bottom: 1px solid var(--line); margin-bottom: 20px }
+.masthead h1 { font-size: clamp(30px, 6vw, 44px) }
+.search { flex: 1 1 220px; max-width: 320px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); font: inherit; color: var(--fg) }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px }
+.chip { border: 1px solid var(--line); background: var(--surface); padding: 6px 12px; border-radius: 999px; font-size: 14px }
+.chip[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); border-color: var(--accent) }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px }
+.card { text-align: left; display: flex; flex-direction: column; padding: 0; overflow: hidden; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; transition: border-color .15s, transform .15s }
+.card .ph { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block; background: var(--sunk) }
+.card .ph-none { width: 100%; aspect-ratio: 3 / 2; display: grid; place-items: center; background: var(--sunk); color: var(--muted); font-family: var(--display); font-size: 40px }
+.card .cb { display: flex; flex-direction: column; gap: 8px; padding: 16px 18px 18px }
+.hero { width: 100%; max-width: 100%; aspect-ratio: 16 / 9; max-height: 440px; object-fit: cover; border-radius: 16px; display: block; margin-bottom: 18px; background: var(--sunk) }
+.credit { font-size: 12px; color: var(--muted); margin: -12px 0 16px }
+.card:hover { border-color: var(--accent); transform: translateY(-1px) }
+.card h2 { font-size: 22px }
+.card p { margin: 0; color: var(--muted); font-size: 14px }
+.facts { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums }
+.facts b { color: var(--fg); font-weight: 600 }
+.empty { color: var(--muted); padding: 30px 0 }
+.howto { margin-top: 28px; font-size: 14px; color: var(--muted); max-width: 60ch }
+
+/* ---------- recipe ---------- */
+.back { background: none; border: 0; padding: 6px 0; color: var(--accent); font-weight: 600; margin-bottom: 10px }
+.r-head { display: grid; gap: 10px; padding-bottom: 18px; border-bottom: 1px solid var(--line) }
+.r-head h1 { font-size: clamp(32px, 7vw, 52px) }
+.r-head .desc { margin: 0; max-width: 60ch; color: var(--muted); font-size: 17px }
+.r-facts { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 4px; font-variant-numeric: tabular-nums }
+.r-facts div { display: grid; gap: 2px }
+.r-facts strong { font-size: 18px; font-weight: 600 }
+.toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; padding-block: 16px }
+.stepper { display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); overflow: hidden }
+.stepper button { border: 0; background: none; width: 40px; height: 38px; font-size: 20px }
+.stepper button:hover { background: var(--sunk) }
+.stepper span { min-width: 92px; text-align: center; font-weight: 600; font-variant-numeric: tabular-nums }
+.seg { display: inline-flex; padding: 3px; border-radius: 10px; background: var(--sunk) }
+.seg button { border: 0; background: none; padding: 6px 12px; border-radius: 8px; font-size: 14px; font-weight: 600; color: var(--muted) }
+.seg button[aria-pressed="true"] { background: var(--surface); color: var(--fg); box-shadow: 0 1px 2px rgb(0 0 0 / .12) }
+.sharebtn { border: 1px solid var(--line); background: var(--surface); padding: 9px 16px; border-radius: 10px; font-weight: 700; color: var(--accent) }
+.sharebtn[aria-expanded="true"] { border-color: var(--accent); background: var(--accent-soft) }
+.share { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 14px; margin-bottom: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px }
+.share p { flex: 1 1 100%; margin: 0; font-size: 14px; color: var(--muted) }
+.share button { border: 1px solid var(--line); background: var(--sunk); border-radius: 10px; padding: 9px 14px; font-weight: 600 }
+.share button:hover { border-color: var(--accent) }
+.share .msg { flex: 1 1 100%; font-size: 14px; font-weight: 600; color: var(--accent); min-height: 1.2em }
+.share textarea { flex: 1 1 100%; min-height: 160px; font: 13px/1.45 var(--body); color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 10px }
+.cookbtn { margin-left: auto; border: 0; background: var(--accent); color: var(--on-accent); padding: 10px 18px; border-radius: 10px; font-weight: 700 }
+
+.layout { display: grid; grid-template-columns: minmax(0, 330px) minmax(0, 1fr); gap: 32px; align-items: start }
+@media (max-width: 760px) { .layout { grid-template-columns: minmax(0, 1fr); gap: 20px } .cookbtn { margin-left: 0 } }
+.ing { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 12px) }
+@media (max-width: 760px) { .ing { position: static } }
+.ing h2, .method h2, .extras h2 { font-size: 24px; margin-bottom: 10px }
+.group + .group { margin-top: 16px }
+.group .label { display: block; margin-bottom: 6px }
+.ing ul { list-style: none; margin: 0; padding: 0 }
+.ing li label { display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 10px; padding: 7px 0; border-bottom: 1px dashed var(--line); cursor: pointer }
+.ing li:last-child label { border-bottom: 0 }
+.ing input { margin: 4px 0 0; accent-color: var(--accent); width: 16px; height: 16px }
+.ing .q { font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap }
+.ing .note { color: var(--muted); font-size: 14px }
+.ing li.done .txt { text-decoration: line-through; color: var(--muted) }
+
+.method ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px }
+.step { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--line) }
+.num { width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); font-family: var(--display); font-size: 18px }
+.step h3 { font-family: var(--body); font-weight: 700; font-size: 17px; margin-bottom: 4px }
+.step p { margin: 0 0 8px; max-width: 62ch }
+.amt { font-weight: 700; color: var(--accent) }
+.timer { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 5px 12px; font-size: 14px; font-weight: 600; font-variant-numeric: tabular-nums }
+.timer:hover { border-color: var(--accent) }
+.timer.running { background: var(--accent); color: var(--on-accent); border-color: var(--accent) }
+.timer.done { background: var(--warm); color: #fff; border-color: var(--warm) }
+.timer svg { width: 15px; height: 15px }
+
+.extras { margin-top: 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px }
+.box { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px }
+.box h2 { font-size: 21px }
+.box ul { margin: 0; padding-left: 18px; display: grid; gap: 6px }
+.box p { margin: 0 0 8px }
+.box h3 { font-family: var(--body); font-size: 15px; font-weight: 700; margin: 12px 0 4px }
+.source { margin-top: 20px; font-size: 14px; color: var(--muted) }
+
+/* ---------- running timers tray ---------- */
+.tray { position: fixed; left: 0; right: 0; bottom: 0; padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px)); background: var(--surface); border-top: 1px solid var(--line); display: flex; gap: 10px; overflow-x: auto; z-index: 20 }
+.tray .t { display: flex; align-items: center; gap: 10px; flex: none; background: var(--sunk); border-radius: 10px; padding: 8px 8px 8px 12px; font-size: 14px }
+.tray .t b { font-variant-numeric: tabular-nums; font-size: 16px }
+.tray .t.done { background: var(--warm); color: #fff }
+.tray .t button { border: 0; background: none; font-size: 13px; text-decoration: underline; padding: 2px 4px }
+
+/* ---------- cook mode ---------- */
+.cook { position: fixed; inset: 0; z-index: 30; background: var(--bg); display: flex; flex-direction: column; padding: calc(env(safe-area-inset-top, 0px) + 16px) 16px calc(env(safe-area-inset-bottom, 0px) + 16px) }
+.cook-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 760px; width: 100%; margin: 0 auto }
+.cook-top button { border: 1px solid var(--line); background: var(--surface); border-radius: 10px; padding: 8px 14px; font-weight: 600 }
+.bar { max-width: 760px; width: 100%; margin: 14px auto 0; height: 4px; background: var(--sunk); border-radius: 4px; overflow: hidden }
+.bar i { display: block; height: 100%; background: var(--accent); transition: width .25s }
+.cook-body { flex: 1; overflow-y: auto; max-width: 760px; width: 100%; margin: 0 auto; padding-block: 28px; display: grid; align-content: start; gap: 16px }
+.cook-body h2 { font-size: clamp(30px, 7vw, 44px) }
+.cook-body p { font-size: clamp(19px, 4.4vw, 24px); line-height: 1.5; margin: 0 }
+.cook-body .timer { font-size: 17px; padding: 10px 18px; justify-self: start }
+.cook-nav { display: flex; gap: 12px; max-width: 760px; width: 100%; margin: 0 auto }
+.cook-nav button { flex: 1; border: 1px solid var(--line); background: var(--surface); border-radius: 12px; padding: 16px; font-weight: 700; font-size: 17px }
+.cook-nav .next { background: var(--accent); color: var(--on-accent); border-color: var(--accent) }
+.cook-nav button:disabled { opacity: .4; cursor: default }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important } }
+</style>
+
+<div class="wrap" id="app"></div>
+<div class="tray" id="tray" hidden></div>
+<div class="cook" id="cook" hidden></div>
+
+<script>
+/* ============================================================
+   RECIPE DATA — every recipe follows this same template.
+   Step text can reference ingredients by key: {flour}
+   ============================================================ */
+const RECIPES = /*RECIPES*/;
+
+/* ============================================================ */
+const $ = (s, r = document) => r.querySelector(s);
+const store = {
+  get(k, d) { try { const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v) } catch { return d } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)) } catch {} }
+};
+let units = store.get("units", "us");
+let servingsBy = {};
+let filter = "All", query = "";
+const timers = {}; // id -> {label, end, done, total}
+
+function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])) }
+function mins(m) { if (m < 60) return m + " min"; const h = Math.floor(m / 60), r = m % 60; return h + " hr" + (r ? " " + r + " min" : "") }
+
+const FR = [[0, ""], [.125, "⅛"], [.25, "¼"], [1/3, "⅓"], [.5, "½"], [2/3, "⅔"], [.75, "¾"], [1, ""]];
+function frac(q) {
+  if (q >= 10) return String(Math.round(q));
+  let w = Math.floor(q), f = q - w, best = FR[0];
+  for (const p of FR) if (Math.abs(p[0] - f) < Math.abs(best[0] - f)) best = p;
+  if (best[0] === 1) { w += 1; best = FR[0] }
+  if (!w && !best[1]) return "pinch";
+  return (w ? w : "") + best[1];
+}
+function metric(q, u) {
+  if (u === "g" && q >= 1000) { q /= 1000; u = "kg" }
+  if (u === "ml" && q >= 1000) { q /= 1000; u = "l" }
+  const n = q >= 100 ? Math.round(q / 5) * 5 : q >= 10 ? Math.round(q) : Math.round(q * 10) / 10;
+  return n + " " + u;
+}
+function usFrom(q, u) {
+  if (u === "g") return q >= 454 ? [q / 453.6, "lb"] : [q / 28.35, "oz"];
+  if (u === "kg") return [q * 2.2046, "lb"];
+  if (u === "ml") return q >= 60 ? [q / 240, "cup"] : q >= 15 ? [q / 15, "tbsp"] : [q / 5, "tsp"];
+  return [q, u];
+}
+function amount(it, f) {
+  if (it.qty == null) return "";
+  if (units === "metric") return it.unit ? metric(it.qty * f, it.unit) : frac(it.qty * f);
+  let q, u;
+  if (it.us) { q = it.us.qty * f; u = it.us.unit } else [q, u] = usFrom(it.qty * f, it.unit);
+  // step tsp/tbsp/cup up or down so numbers stay readable
+  if (u === "tsp" && q >= 3) { q /= 3; u = "tbsp" }
+  if (u === "tbsp" && q >= 4) { q /= 16; u = "cup" }
+  if (u === "cup" && q < .25) { q *= 16; u = "tbsp" }
+  if (u === "tbsp" && q < 1) { q *= 3; u = "tsp" }
+  const n = (u === "oz" || u === "lb") ? (Math.round(q * 10) / 10) : frac(q);
+  const plural = u === "cup" && parseFloat(q) > 1 ? "cups" : u;
+  return u ? n + " " + plural : n;
+}
+
+function factor(r) { return (servingsBy[r.id] ?? r.servings) / r.servings }
+function stepHTML(r, text) {
+  const f = factor(r), byKey = {};
+  r.groups.forEach(g => g.items.forEach(i => { if (i.key) byKey[i.key] = i }));
+  return esc(text).replace(/\{(\w+)\}/g, (m, k) => {
+    const i = byKey[k]; if (!i) return m;
+    return `<span class="amt">${amount(i, f)}</span> ${esc(i.short || i.name)}`;
+  });
+}
+
+/* ---------- share one recipe ---------- */
+let shareOpen = false, canSave = null, downloadsNS = null;
+(async () => { try { downloadsNS = await window.claude?.use?.("downloads") } catch {} canSave = true;
+  const b = document.querySelector("[data-sharepdf]"); if (b) b.hidden = !canSave })();
+function stepPlain(r, text) {
+  const f = factor(r), byKey = {};
+  r.groups.forEach(g => g.items.forEach(i => { if (i.key) byKey[i.key] = i }));
+  return text.replace(/\{(\w+)\}/g, (m, k) => { const i = byKey[k]; return i ? amount(i, f) + " " + (i.short || i.name) : m });
+}
+function ingLine(i, f) { return (i.qty != null ? amount(i, f) + " " : "") + i.name + (i.note ? " (" + i.note + ")" : "") }
+function recipeText(r) {
+  const f = factor(r), sv = servingsBy[r.id] ?? r.servings, L = [];
+  L.push(r.title.toUpperCase(), r.description, "");
+  L.push(`Makes ${sv} ${r.servingWord} · Hands-on ${mins(r.activeTime)} · Total ${mins(r.totalTime)}`, "");
+  L.push("INGREDIENTS");
+  r.groups.forEach(g => { L.push(g.name + ":"); g.items.forEach(i => L.push("• " + ingLine(i, f))) });
+  if (r.equipment?.length) L.push("", "Equipment: " + r.equipment.join(", "));
+  L.push("", "METHOD");
+  r.steps.forEach((s, i) => L.push(`${i + 1}. ${s.title}. ${stepPlain(r, s.text)}`));
+  if (r.variations?.length) { L.push("", "TOPPING COMBOS"); r.variations.forEach(v => L.push("• " + v)) }
+  if (r.makeAhead?.length) { L.push("", "MAKE AHEAD AND FREEZE"); r.makeAhead.forEach(m => L.push("• " + m.title + ": " + m.text)) }
+  if (r.tips?.length || r.nutrition) { L.push("", "NOTES"); (r.tips || []).forEach(t => L.push("• " + t)); if (r.nutrition) L.push("• " + r.nutrition) }
+  L.push("", "Source: " + r.source, "From Pauly's Recipe Book");
+  return L.join("\n");
+}
+const BOOK_URL = "/*SITE*/";
+function linkFor(r) { return BOOK_URL + "r/" + r.id + "/" }
+function shareMsg(t) { const m = $("#share-msg"); if (m) m.textContent = t }
+async function copyLink(r) {
+  try { await navigator.clipboard.writeText(linkFor(r)); shareMsg("Link copied. Paste it into a text."); }
+  catch {
+    const p = $("#share-panel"); let ta = p.querySelector("textarea");
+    if (!ta) { ta = document.createElement("textarea"); ta.id = "share-text"; ta.readOnly = true; ta.setAttribute("aria-label", "Recipe link"); p.appendChild(ta) }
+    ta.value = linkFor(r); ta.style.minHeight = "0"; ta.rows = 2; ta.focus(); ta.select();
+    shareMsg("Copying is blocked here. The link is selected below, so copy it from your keyboard menu.");
+  }
+}
+async function copyRecipe(r) {
+  const txt = recipeText(r);
+  try { await navigator.clipboard.writeText(txt); shareMsg("Copied. Paste it into a text or email."); }
+  catch {
+    const p = $("#share-panel"); let ta = p.querySelector("textarea");
+    if (!ta) { ta = document.createElement("textarea"); ta.id = "share-text"; ta.readOnly = true; ta.setAttribute("aria-label", "Recipe text"); p.appendChild(ta) }
+    ta.value = txt; ta.style.minHeight = ""; ta.rows = 2; ta.focus(); ta.select();
+    shareMsg("Copying is blocked here. The text is selected below, so copy it from your keyboard menu.");
+  }
+}
+let jsPDFp;
+function loadPDF() {
+  return jsPDFp ||= new Promise((ok, no) => { const s = document.createElement("script");
+    s.src = "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js";
+    s.onload = () => ok(window.jspdf.jsPDF); s.onerror = () => { jsPDFp = null; no(new Error("load")) }; document.head.appendChild(s) });
+}
+function pdfSafe(t) {
+  return String(t).replace(/(\d)?([½⅓⅔¼¾⅛])/g, (m, d, c) => (d ? d + " " : "") + ({ "½": "1/2", "⅓": "1/3", "⅔": "2/3", "¼": "1/4", "¾": "3/4", "⅛": "1/8" })[c])
+    .replace(/→/g, "->").replace(/←/g, "<-").replace(/[^\u0000-ÿ–—‘’“”•…]/g, "");
+}
+async function buildPDF(r) {
+  const JsPDF = await loadPDF();
+  const doc = new JsPDF({ unit: "pt", format: "letter" });
+  const W = doc.internal.pageSize.getWidth(), H = doc.internal.pageSize.getHeight(), M = 54, CW = W - 2 * M;
+  const green = [77, 106, 42], ink = [35, 39, 29], grey = [100, 106, 89];
+  let y = M;
+  const room = h => { if (y + h > H - M) { doc.addPage(); y = M } };
+  const para = (t, { size = 11, style = "normal", font = "helvetica", color = ink, gap = 4, indent = 0, lh = 1.35 } = {}) => {
+    doc.setFont(font, style); doc.setFontSize(size); doc.setTextColor(...color);
+    for (const line of doc.splitTextToSize(pdfSafe(t), CW - indent)) { room(size * lh); doc.text(line, M + indent, y + size); y += size * lh }
+    y += gap;
+  };
+  const head = t => { y += 8; room(40); para(t.toUpperCase(), { size: 10, style: "bold", color: green, gap: 6 }) };
+  const f = factor(r), sv = servingsBy[r.id] ?? r.servings;
+  if (r.image) { try { const ih = Math.min(CW * 2 / 3, 260), iw = ih * 1.5; doc.addImage(r.image, "JPEG", M + (CW - iw) / 2, y, iw, ih); y += ih + 18 } catch {} }
+  para(r.category, { size: 9, style: "bold", color: grey, gap: 2 });
+  para(r.title, { size: 26, font: "times", style: "bold", gap: 6, lh: 1.15 });
+  para(r.description, { size: 12, color: grey, gap: 6 });
+  para(`Makes ${sv} ${r.servingWord}   ·   Hands-on ${mins(r.activeTime)}   ·   Total ${mins(r.totalTime)}`, { size: 10, style: "bold", gap: 4 });
+  doc.setDrawColor(217, 220, 207); doc.line(M, y, W - M, y); y += 8;
+  head("Ingredients");
+  r.groups.forEach(g => { para(g.name, { size: 10, style: "bold", color: grey, gap: 2 }); g.items.forEach(i => para("•  " + ingLine(i, f), { gap: 1, indent: 6 })); y += 4 });
+  if (r.equipment?.length) para("Equipment: " + r.equipment.join(", "), { size: 10, color: grey });
+  head("Method");
+  r.steps.forEach((s, i) => { room(40); para(`${i + 1}.  ${s.title}`, { style: "bold", gap: 1 }); para(stepPlain(r, s.text), { indent: 16, gap: 6 }) });
+  if (r.variations?.length) { head("Topping combos"); r.variations.forEach(v => para("•  " + v, { gap: 1, indent: 6 })) }
+  if (r.makeAhead?.length) { head("Make ahead and freeze"); r.makeAhead.forEach(m => { para(m.title, { style: "bold", gap: 1 }); para(m.text, { gap: 6 }) }) }
+  if (r.tips?.length || r.nutrition) { head("Notes"); (r.tips || []).forEach(t => para("•  " + t, { gap: 1, indent: 6 })); if (r.nutrition) para("•  " + r.nutrition, { gap: 1, indent: 6 }) }
+  y += 10; para("Source: " + r.source + "   ·   From Pauly's Recipe Book", { size: 9, color: grey });
+  return doc.output("blob");
+}
+async function savePDF(r) {
+  shareMsg("Making the PDF…");
+  let blob;
+  try { if (r.image && !r.image.startsWith("data:")) { const im = await fetch(r.image).then(x => x.blob()); r = { ...r, image: await new Promise(ok => { const fr = new FileReader(); fr.onload = () => ok(fr.result); fr.readAsDataURL(im) }) } } } catch {}
+  try { blob = await buildPDF(r) } catch { shareMsg("The PDF maker didn't load. Check your connection and try again."); return }
+  if (!downloadsNS) {
+    const file = new File([blob], r.title + ".pdf", { type: "application/pdf" });
+    try { if (navigator.canShare?.({ files: [file] })) { await navigator.share({ files: [file], title: r.title }); shareMsg("PDF ready to send."); return } }
+    catch (e) { if (e?.name === "AbortError") { shareMsg(""); return } }
+    const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = file.name;
+    document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 10000);
+    shareMsg("PDF downloaded."); return;
+  }
+  try { await downloadsNS.save({ filename: r.title + ".pdf", data: blob }); shareMsg("PDF ready to send.") }
+  catch (e) {
+    const c = e?.code;
+    shareMsg(c === "declined" ? "" : c === "rate_limited" ? "A save prompt is already open. Finish that one first." : "Saving files isn't available in this view. Use Copy as text instead.");
+  }
+}
+
+/* ---------- views ---------- */
+function renderIndex() {
+  const cats = ["All", ...new Set(RECIPES.map(r => r.category))];
+  const q = query.trim().toLowerCase();
+  const list = RECIPES.filter(r => (filter === "All" || r.category === filter) &&
+    (!q || (r.title + " " + r.description + " " + r.groups.flatMap(g => g.items.map(i => i.name)).join(" ")).toLowerCase().includes(q)));
+  $("#app").innerHTML = `
+    <header class="masthead">
+      <div><span class="label">${RECIPES.length} recipe${RECIPES.length === 1 ? "" : "s"}</span><h1>Pauly's Recipe Book</h1></div>
+      <input class="search" id="search" type="search" placeholder="Search recipes or ingredients" value="${esc(query)}" aria-label="Search recipes">
+    </header>
+    <div class="chips">${cats.map(c => `<button class="chip" data-cat="${esc(c)}" aria-pressed="${c === filter}">${esc(c)}</button>`).join("")}</div>
+    <div class="grid">${list.map(r => `
+      <button class="card" data-open="${r.id}">
+        ${r.image ? `<img class="ph" src="${r.image}" alt="">` : `<span class="ph-none" aria-hidden="true">${esc(r.title[0])}</span>`}
+        <span class="cb">
+        <span class="label">${esc(r.category)}</span>
+        <h2>${esc(r.title)}</h2>
+        <p>${esc(r.description)}</p>
+        <span class="facts"><span><b>${mins(r.totalTime)}</b> total</span><span><b>${r.servings}</b> ${esc(r.servingWord)}</span></span>
+        </span>
+      </button>`).join("") || `<p class="empty">No recipes match that search.</p>`}</div>
+    <p class="howto">To add a recipe, send Claude a screenshot or PDF in this project and ask to add it to the recipe book.</p>`;
+  const s = $("#search");
+  s.addEventListener("input", e => { query = e.target.value; const pos = e.target.selectionStart; renderIndex(); const n = $("#search"); n.focus(); n.setSelectionRange(pos, pos) });
+}
+
+function renderRecipe(r) {
+  const f = factor(r), sv = servingsBy[r.id] ?? r.servings;
+  const checked = store.get("chk-" + r.id, []);
+  let n = 0;
+  $("#app").innerHTML = `
+    ${sharedView() ? "" : `<button class="back" data-home>← All recipes</button>`}
+    ${r.image ? `<img class="hero" src="${r.image}" alt="${esc(r.title)}"><p class="credit">Photo: ${esc(r.source)}</p>` : ""}
+    <header class="r-head">
+      <span class="label">${esc(r.category)}</span>
+      <h1>${esc(r.title)}</h1>
+      <p class="desc">${esc(r.description)}</p>
+      <div class="r-facts">
+        <div><span class="label">Yield</span><strong>${esc(r.yieldNote)}</strong></div>
+        <div><span class="label">Hands-on</span><strong>${mins(r.activeTime)}</strong></div>
+        <div><span class="label">Total</span><strong>${mins(r.totalTime)}</strong></div>
+      </div>
+    </header>
+    <div class="toolbar">
+      <div class="stepper" role="group" aria-label="Servings">
+        <button data-sv="-1" aria-label="Fewer">−</button><span>${sv} ${esc(r.servingWord)}</span><button data-sv="1" aria-label="More">+</button>
+      </div>
+      <div class="seg" role="group" aria-label="Units">
+        <button data-units="us" aria-pressed="${units === "us"}">US</button><button data-units="metric" aria-pressed="${units === "metric"}">Metric</button>
+      </div>
+      <button class="sharebtn" data-share aria-expanded="${shareOpen}" aria-controls="share-panel">Share</button>
+      <button class="cookbtn" data-cook="0">Start cooking</button>
+    </div>
+    <div class="share" id="share-panel" ${shareOpen ? "" : "hidden"}>
+      <p>Copy link sends a link that opens straight to this recipe. The PDF and text options use the servings and units shown above.</p>
+      <button data-sharelink>Copy link</button>
+      <button data-sharepdf ${canSave === false ? "hidden" : ""}>Save as PDF</button>
+      <button data-sharecopy>Copy as text</button>
+      <span class="msg" id="share-msg" role="status"></span>
+    </div>
+    <div class="layout">
+      <aside class="ing">
+        <h2>Ingredients</h2>
+        ${r.groups.map(g => `<div class="group"><span class="label">${esc(g.name)}</span><ul>${g.items.map(i => { const id = n++, on = checked.includes(id); return `
+          <li class="${on ? "done" : ""}"><label><input type="checkbox" id="ing-${r.id}-${id}" data-chk="${id}" ${on ? "checked" : ""}>
+          <span class="txt">${i.qty != null ? `<span class="q">${amount(i, f)}</span> ` : ""}${esc(i.name)}${i.note ? ` <span class="note">(${esc(i.note)})</span>` : ""}</span></label></li>` }).join("")}</ul></div>`).join("")}
+        ${r.equipment?.length ? `<div class="group"><span class="label">Equipment</span><div class="note">${r.equipment.map(esc).join(" · ")}</div></div>` : ""}
+      </aside>
+      <section class="method">
+        <h2>Method</h2>
+        <ol>${r.steps.map((s, i) => `
+          <li class="step"><span class="num">${i + 1}</span><div>
+            <h3>${esc(s.title)}</h3><p>${stepHTML(r, s.text)}</p>${s.timer ? timerBtn(r, i) : ""}
+          </div></li>`).join("")}</ol>
+      </section>
+    </div>
+    <div class="extras">
+      ${r.variations?.length ? `<div class="box"><h2>Topping combos</h2><ul>${r.variations.map(v => `<li>${esc(v)}</li>`).join("")}</ul></div>` : ""}
+      ${r.makeAhead?.length ? `<div class="box"><h2>Make ahead and freeze</h2>${r.makeAhead.map(m => `<h3>${esc(m.title)}</h3><p>${esc(m.text)}</p>`).join("")}</div>` : ""}
+      ${r.tips?.length || r.nutrition ? `<div class="box"><h2>Notes</h2><ul>${(r.tips || []).map(t => `<li>${esc(t)}</li>`).join("")}${r.nutrition ? `<li>${esc(r.nutrition)}</li>` : ""}</ul></div>` : ""}
+    </div>
+    <p class="source">Source: ${esc(r.source)} · Added ${esc(r.added)}</p>`;
+}
+
+const clock = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg>`;
+function tid(r, i) { return r.id + ":" + i }
+function fmtLeft(ms) { const s = Math.max(0, Math.ceil(ms / 1000)), h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60), x = s % 60;
+  return (h ? h + ":" + String(m).padStart(2, "0") : m) + ":" + String(x).padStart(2, "0") }
+function timerBtn(r, i) {
+  const t = timers[tid(r, i)], s = r.steps[i];
+  const cls = t ? (t.done ? "done" : "running") : "";
+  const txt = t ? (t.done ? "Time's up · reset" : fmtLeft(t.end - Date.now()) + " · tap to stop") : "Start " + mins(s.timer) + " timer";
+  return `<button class="timer ${cls}" data-timer="${i}" data-tid="${tid(r, i)}">${clock}<span>${txt}</span></button>`;
+}
+
+/* ---------- timers ---------- */
+let audio;
+function beep() {
+  try { audio ||= new (window.AudioContext || window.webkitAudioContext)();
+    [0, .35, .7].forEach(d => { const o = audio.createOscillator(), g = audio.createGain(); o.frequency.value = 880;
+      g.gain.setValueAtTime(.25, audio.currentTime + d); g.gain.exponentialRampToValueAtTime(.001, audio.currentTime + d + .3);
+      o.connect(g).connect(audio.destination); o.start(audio.currentTime + d); o.stop(audio.currentTime + d + .3) }) } catch {}
+}
+function toggleTimer(r, i) {
+  const k = tid(r, i);
+  if (timers[k]) delete timers[k];
+  else { try { audio ||= new (window.AudioContext || window.webkitAudioContext)(); audio.resume() } catch {}
+    timers[k] = { label: r.steps[i].title, end: Date.now() + r.steps[i].timer * 60000, done: false } }
+  tick();
+}
+function tick() {
+  const now = Date.now();
+  for (const [k, t] of Object.entries(timers)) if (!t.done && now >= t.end) { t.done = true; beep() }
+  document.querySelectorAll("[data-tid]").forEach(b => {
+    const t = timers[b.dataset.tid];
+    b.className = "timer" + (t ? (t.done ? " done" : " running") : "");
+    const [rid, i] = b.dataset.tid.split(":"), r = RECIPES.find(x => x.id === rid);
+    b.querySelector("span").textContent = t ? (t.done ? "Time's up · reset" : fmtLeft(t.end - now) + " · tap to stop") : "Start " + mins(r.steps[i].timer) + " timer";
+  });
+  const tray = $("#tray"), list = Object.entries(timers);
+  tray.hidden = !list.length;
+  tray.innerHTML = list.map(([k, t]) => `<div class="t ${t.done ? "done" : ""}"><span>${esc(t.label)}</span><b>${t.done ? "Done" : fmtLeft(t.end - now)}</b><button data-clear="${k}">${t.done ? "Dismiss" : "Cancel"}</button></div>`).join("");
+}
+setInterval(tick, 1000);
+
+/* ---------- cook mode ---------- */
+let wake;
+async function openCook(r, i) {
+  const c = $("#cook"); c.hidden = false; c.dataset.r = r.id; c.dataset.i = i;
+  const s = r.steps[i];
+  c.innerHTML = `
+    <div class="cook-top"><span class="label">${esc(r.title)} · Step ${i + 1} of ${r.steps.length}</span><button data-closecook>Close</button></div>
+    <div class="bar"><i style="width:${(i + 1) / r.steps.length * 100}%"></i></div>
+    <div class="cook-body"><h2>${esc(s.title)}</h2><p>${stepHTML(r, s.text)}</p>${s.timer ? timerBtn(r, i) : ""}</div>
+    <div class="cook-nav"><button data-cook="${i - 1}" ${i ? "" : "disabled"}>← Back</button>
+    ${i < r.steps.length - 1 ? `<button class="next" data-cook="${i + 1}">Next step →</button>` : `<button class="next" data-closecook>Finished</button>`}</div>`;
+  try { if (!wake && navigator.wakeLock) wake = await navigator.wakeLock.request("screen") } catch {}
+}
+function closeCook() { $("#cook").hidden = true; try { wake?.release() } catch {} wake = null }
+
+/* ---------- routing & events ---------- */
+function sharedView() { return location.hash.startsWith("#s/") }
+function current() { const h = location.hash.slice(1).replace(/^s\//, ""); return RECIPES.find(r => r.id === h) }
+function route() { const r = current(); closeCook(); shareOpen = false; r ? renderRecipe(r) : renderIndex(); window.scrollTo(0, 0); tick() }
+window.addEventListener("hashchange", route);
+
+document.addEventListener("click", e => {
+  const t = e.target.closest("button"); if (!t) return;
+  const r = current() || RECIPES.find(x => x.id === $("#cook").dataset.r);
+  if (t.dataset.open) location.hash = t.dataset.open;
+  else if (t.hasAttribute("data-home")) location.hash = "";
+  else if (t.dataset.cat) { filter = t.dataset.cat; renderIndex() }
+  else if (t.dataset.sv) { const sv = (servingsBy[r.id] ?? r.servings) + +t.dataset.sv; if (sv >= 1) { servingsBy[r.id] = sv; renderRecipe(r); tick() } }
+  else if (t.dataset.units) { units = t.dataset.units; store.set("units", units); renderRecipe(r); tick() }
+  else if (t.dataset.timer) toggleTimer(r, +t.dataset.timer);
+  else if (t.dataset.clear) { delete timers[t.dataset.clear]; tick() }
+  else if (t.hasAttribute("data-share")) { shareOpen = !shareOpen; t.setAttribute("aria-expanded", shareOpen); $("#share-panel").hidden = !shareOpen; shareMsg("") }
+  else if (t.hasAttribute("data-sharelink")) copyLink(r);
+  else if (t.hasAttribute("data-sharecopy")) copyRecipe(r);
+  else if (t.hasAttribute("data-sharepdf")) savePDF(r);
+  else if (t.hasAttribute("data-closecook")) closeCook();
+  else if (t.dataset.cook != null) openCook(r, +t.dataset.cook);
+});
+document.addEventListener("change", e => {
+  const c = e.target; if (!c.dataset.chk) return;
+  const r = current(), k = "chk-" + r.id; let arr = store.get(k, []);
+  arr = c.checked ? [...arr, +c.dataset.chk] : arr.filter(x => x !== +c.dataset.chk);
+  store.set(k, arr); c.closest("li").classList.toggle("done", c.checked);
+});
+document.addEventListener("keydown", e => {
+  const c = $("#cook"); if (c.hidden) return;
+  const r = RECIPES.find(x => x.id === c.dataset.r), i = +c.dataset.i;
+  if (e.key === "ArrowRight" && i < r.steps.length - 1) openCook(r, i + 1);
+  if (e.key === "ArrowLeft" && i > 0) openCook(r, i - 1);
+  if (e.key === "Escape") closeCook();
+});
+route();
+</script>
+
+</body></html>
