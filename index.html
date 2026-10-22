@@ -236,7 +236,7 @@ function recipeText(r) {
   L.push("", "Source: " + r.source, "From Pauly's Recipe Book");
   return L.join("\n");
 }
-const BOOK_URL = "https://paulytx.github.io/recipes/";
+const BOOK_URL = "https://paulytx.github.io/Recipes/";
 function linkFor(r) { return BOOK_URL + "r/" + r.id + "/" }
 function shareMsg(t) { const m = $("#share-msg"); if (m) m.textContent = t }
 function sendLink(r) {

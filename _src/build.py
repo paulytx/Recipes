@@ -1,9 +1,9 @@
 """Build Pauly's Recipe Book site.
-Usage: python3 _src/build.py https://paulytx.github.io/recipes/
+Usage: python3 _src/build.py https://paulytx.github.io/Recipes/
 Writes index.html plus r/<id>/index.html (one share page per recipe, with its own
 title and photo preview, that opens the recipe in the book)."""
 import json, sys, html, os, shutil
-site = sys.argv[1] if len(sys.argv) > 1 else "https://paulytx.github.io/recipes/"
+site = sys.argv[1] if len(sys.argv) > 1 else "https://paulytx.github.io/Recipes/"
 if not site.endswith("/"): site += "/"
 root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 recipes = json.load(open(os.path.join(root, "_src/recipes.json"), encoding="utf-8"))
