@@ -8559,5 +8559,1170 @@
   "source": "NYT Cooking, Alison Roman",
   "image": "img/broccoli-and-cheddar-soup.jpg",
   "added": "2026-10-23"
+ },
+ {
+  "id": "broccoli-cheddar-soup",
+  "title": "Broccoli-Cheddar Soup",
+  "category": "Soups",
+  "description": "Panera-style creamy broccoli-cheddar soup with carrots, ready in 30 minutes.",
+  "servings": 4,
+  "servingWord": "servings",
+  "yieldNote": "Serves 4",
+  "activeTime": 30,
+  "totalTime": 30,
+  "equipment": [
+   "Large saucepan",
+   "Whisk",
+   "Box grater"
+  ],
+  "groups": [
+   {
+    "name": "Soup",
+    "items": [
+     {
+      "key": "butter",
+      "qty": 70,
+      "unit": "g",
+      "name": "salted butter",
+      "short": "butter",
+      "us": {
+       "qty": 5,
+       "unit": "tbsp"
+      }
+     },
+     {
+      "key": "onion",
+      "qty": 75,
+      "unit": "g",
+      "name": "yellow onion, chopped",
+      "short": "chopped onion",
+      "us": {
+       "qty": 0.5,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "flour",
+      "qty": 30,
+      "unit": "g",
+      "name": "all-purpose flour",
+      "short": "flour",
+      "us": {
+       "qty": 0.25,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "broth",
+      "qty": 480,
+      "unit": "ml",
+      "name": "reduced-sodium chicken broth",
+      "short": "chicken broth",
+      "us": {
+       "qty": 2,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "halfhalf",
+      "qty": 480,
+      "unit": "ml",
+      "name": "half-and-half",
+      "short": "half-and-half",
+      "us": {
+       "qty": 2,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "carrots",
+      "qty": 110,
+      "unit": "g",
+      "name": "shredded or matchstick carrots",
+      "short": "carrots",
+      "us": {
+       "qty": 1,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "broccoli",
+      "qty": 200,
+      "unit": "g",
+      "name": "bite-size broccoli florets",
+      "short": "broccoli florets",
+      "us": {
+       "qty": 3,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "cheddar",
+      "qty": 225,
+      "unit": "g",
+      "name": "sharp cheddar cheese, shredded",
+      "short": "shredded cheddar",
+      "us": {
+       "qty": 8,
+       "unit": "oz"
+      },
+      "note": "shred it from a block"
+     },
+     {
+      "key": "nutmeg",
+      "qty": 0.25,
+      "unit": "tsp",
+      "name": "ground nutmeg",
+      "short": "nutmeg"
+     },
+     {
+      "key": "salt",
+      "qty": 0.25,
+      "unit": "tsp",
+      "name": "salt",
+      "short": "salt"
+     },
+     {
+      "key": "pepper",
+      "qty": 0.25,
+      "unit": "tsp",
+      "name": "freshly ground black pepper",
+      "short": "black pepper"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "title": "Soften the onion",
+    "text": "Melt {butter} in a large saucepan over medium-low heat. Add {onion} and cook until softened, about 3 minutes.",
+    "timer": 3
+   },
+   {
+    "title": "Cook the flour",
+    "text": "Sprinkle in {flour} and cook, stirring, for 1 minute.",
+    "timer": 1
+   },
+   {
+    "title": "Whisk in the liquids",
+    "text": "Gradually whisk in {broth} and {halfhalf}. Cook and stir until thickened and bubbly."
+   },
+   {
+    "title": "Simmer the carrots",
+    "text": "Add {carrots} and simmer for 5 minutes, stirring now and then.",
+    "timer": 5
+   },
+   {
+    "title": "Add the broccoli",
+    "text": "Add {broccoli} and keep simmering, stirring now and then, until the vegetables are just tender, about 5 minutes more.",
+    "timer": 5
+   },
+   {
+    "title": "Melt in the cheese",
+    "text": "Turn the heat to low. Stir in {cheddar} until melted, then stir in {nutmeg}, {salt} and {pepper}."
+   }
+  ],
+  "tips": [
+   "Buy a block of cheddar and shred it just before using. Pre-shredded cheese doesn't melt as smoothly."
+  ],
+  "makeAhead": [
+   {
+    "title": "Fridge",
+    "text": "Keeps in an airtight container in the refrigerator for up to 3 days. Reheat gently over low heat without boiling so the cheese doesn't split."
+   }
+  ],
+  "nutrition": "Per serving: 586 cal, 47 g fat (30 g sat. fat), 131 mg chol., 993 mg sodium, 23 g carbs, 3 g fiber, 9 g sugars, 21 g protein.",
+  "source": "Copycat Recipes magazine, p. 24 (copycat Panera)",
+  "image": "img/broccoli-cheddar-soup.jpg",
+  "added": "2026-10-23"
+ },
+ {
+  "id": "bacon-and-cheese-egg-bites",
+  "title": "Bacon-and-Cheese Egg Bites",
+  "category": "Breakfast",
+  "description": "Starbucks-style velvety egg bites with Gruyère, Monterey Jack and bacon, baked in jars in a water bath.",
+  "servings": 6,
+  "servingWord": "jars",
+  "yieldNote": "Makes 6 jars",
+  "activeTime": 20,
+  "totalTime": 65,
+  "equipment": [
+   "Six wide-mouth half-pint (8 oz) jars",
+   "13 × 9 × 2-inch baking pan",
+   "Blender"
+  ],
+  "groups": [
+   {
+    "name": "Egg bites",
+    "items": [
+     {
+      "name": "Nonstick cooking spray"
+     },
+     {
+      "key": "gruyere",
+      "qty": 115,
+      "unit": "g",
+      "name": "Gruyère cheese, shredded",
+      "short": "shredded Gruyère",
+      "us": {
+       "qty": 1,
+       "unit": "cup"
+      },
+      "note": "4 oz, divided"
+     },
+     {
+      "key": "eggs",
+      "qty": 8,
+      "name": "large eggs",
+      "short": "eggs"
+     },
+     {
+      "key": "cottage",
+      "qty": 170,
+      "unit": "g",
+      "name": "cottage cheese",
+      "short": "cottage cheese",
+      "us": {
+       "qty": 0.75,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "jack",
+      "qty": 55,
+      "unit": "g",
+      "name": "Monterey Jack cheese, shredded",
+      "short": "shredded Monterey Jack",
+      "us": {
+       "qty": 0.5,
+       "unit": "cup"
+      },
+      "note": "2 oz"
+     },
+     {
+      "key": "salt",
+      "qty": 0.5,
+      "unit": "tsp",
+      "name": "salt",
+      "short": "salt"
+     },
+     {
+      "key": "pepper",
+      "qty": 0.125,
+      "unit": "tsp",
+      "name": "black pepper",
+      "short": "black pepper"
+     },
+     {
+      "key": "bacon",
+      "qty": 3,
+      "name": "slices applewood smoked bacon, crisp-cooked and crumbled",
+      "short": "crumbled bacon"
+     }
+    ]
+   },
+   {
+    "name": "To finish (optional)",
+    "items": [
+     {
+      "name": "Chopped fresh herbs"
+     },
+     {
+      "name": "Hot sauce"
+     },
+     {
+      "name": "Paprika"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "title": "Prep the jars",
+    "text": "Heat the oven to 160°C / 140°C fan / gas 3 (325°F). Coat the jars with cooking spray. Divide a quarter of the {gruyere} among the jars, then set the jars in the baking pan."
+   },
+   {
+    "title": "Blend the eggs",
+    "text": "In a blender, blend {eggs}, {cottage}, {jack}, {salt}, {pepper} and the rest of the Gruyère until smooth."
+   },
+   {
+    "title": "Fill the jars",
+    "text": "Divide the egg mixture among the jars and top each with {bacon}."
+   },
+   {
+    "title": "Set up the water bath",
+    "text": "Put the pan on the oven rack, then pour warm water (about 50°C / 120°F) into the pan to come halfway up the sides of the jars."
+   },
+   {
+    "title": "Bake",
+    "text": "Bake until the eggs are set, 35–40 minutes.",
+    "timer": 35
+   },
+   {
+    "title": "Cool and top",
+    "text": "Carefully lift the jars out of the water bath and let them cool slightly. Top with herbs, hot sauce or paprika if you like."
+   }
+  ],
+  "variations": [
+   "Stir ½ cup chopped baby spinach into each batch before filling the jars",
+   "½ cup chopped jarred roasted red peppers, drained and patted dry",
+   "One 3-oz fully cooked andouille sausage link, chopped, instead of the bacon",
+   "1 cup chopped mushrooms, sautéed in butter",
+   "2 tbsp chopped green onion"
+  ],
+  "tips": [
+   "Narrow-mouth half-pint jars work too. Bake them 40–45 minutes."
+  ],
+  "makeAhead": [
+   {
+    "title": "Fridge",
+    "text": "Once cooled, cover and chill for up to 3 days."
+   },
+   {
+    "title": "Reheat",
+    "text": "Take off the lid and microwave for 45 seconds, then let stand 1 minute so the heat evens out."
+   }
+  ],
+  "nutrition": "Per jar: 250 cal, 17 g fat (8 g sat. fat), 285 mg chol., 634 mg sodium, 2 g carbs, 0 g fiber, 1 g sugars, 21 g protein.",
+  "source": "Copycat Recipes magazine, p. 7 (copycat Starbucks)",
+  "image": "img/bacon-and-cheese-egg-bites.jpg",
+  "added": "2026-10-23"
+ },
+ {
+  "id": "frittata",
+  "title": "Frittata",
+  "category": "Breakfast",
+  "description": "A clean-out-the-fridge frittata with leftover cooked meat, wilting veggies, a fresh herb and cheese, finished under the broiler.",
+  "servings": 4,
+  "servingWord": "servings",
+  "yieldNote": "One 12-inch frittata (serves about 4)",
+  "activeTime": 20,
+  "totalTime": 20,
+  "equipment": [
+   "Mixing bowl",
+   "Whisk",
+   "12-inch broiler-proof nonstick skillet",
+   "Spatula"
+  ],
+  "groups": [
+   {
+    "name": "Egg mixture",
+    "items": [
+     {
+      "key": "eggs",
+      "qty": 8,
+      "name": "large eggs",
+      "short": "eggs"
+     },
+     {
+      "key": "milk",
+      "qty": 120,
+      "unit": "ml",
+      "name": "milk",
+      "short": "milk",
+      "us": {
+       "qty": 0.5,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "meat",
+      "qty": 70,
+      "unit": "g",
+      "name": "cooked meat, chopped or crumbled",
+      "short": "chopped cooked meat",
+      "us": {
+       "qty": 0.5,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "herb",
+      "qty": 2,
+      "unit": "tbsp",
+      "name": "snipped fresh herb",
+      "short": "snipped fresh herb"
+     },
+     {
+      "key": "salt",
+      "qty": 0.25,
+      "unit": "tsp",
+      "name": "salt",
+      "short": "salt"
+     },
+     {
+      "key": "pepper",
+      "qty": 0.125,
+      "unit": "tsp",
+      "name": "black pepper",
+      "short": "black pepper"
+     }
+    ]
+   },
+   {
+    "name": "Skillet",
+    "items": [
+     {
+      "key": "oil",
+      "qty": 30,
+      "unit": "ml",
+      "name": "oil",
+      "short": "oil",
+      "us": {
+       "qty": 2,
+       "unit": "tbsp"
+      }
+     },
+     {
+      "key": "veggies",
+      "qty": 150,
+      "unit": "g",
+      "name": "chopped veggies",
+      "short": "chopped veggies",
+      "us": {
+       "qty": 2,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "cheese",
+      "qty": 28,
+      "unit": "g",
+      "name": "cheese, shredded or grated",
+      "short": "cheese",
+      "us": {
+       "qty": 0.25,
+       "unit": "cup"
+      },
+      "note": "1 oz"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "title": "Whisk the eggs",
+    "text": "Whisk together {eggs}, {milk}, {meat}, {herb}, {salt} and {pepper}."
+   },
+   {
+    "title": "Sauté the veggies",
+    "text": "In a 12-inch broiler-proof nonstick skillet, heat {oil} over medium heat. Sauté {veggies} until tender."
+   },
+   {
+    "title": "Cook the eggs",
+    "text": "Pour the egg mixture over the veggies and cook over medium heat. As it sets, run a spatula around the edge of the skillet and lift the eggs so the uncooked part flows underneath. Keep cooking and lifting until almost set. The surface will still be moist."
+   },
+   {
+    "title": "Add the cheese",
+    "text": "Sprinkle with {cheese}."
+   },
+   {
+    "title": "Broil",
+    "text": "Put the skillet under the broiler, 10–13 cm (4–5 inches) from the heat. Broil 1–2 minutes, just until the top is set.",
+    "timer": 2
+   }
+  ],
+  "variations": [
+   "Our combo: ham, fresh sage, kale, onions and mushrooms, with Parmesan"
+  ],
+  "tips": [
+   "A good home for wilting crisper-drawer veggies and last night's leftovers."
+  ],
+  "source": "Better Homes & Gardens: Cooking for Two, p. 6",
+  "image": "img/frittata.jpg",
+  "added": "2026-10-23"
+ },
+ {
+  "id": "chocolate-bundt-cake",
+  "title": "Chocolate Bundt Cake",
+  "category": "Desserts",
+  "description": "Moist chocolate chip Bundt cake from a doctored cake mix, with thick cream cheese frosting, inspired by Nothing Bundt Cakes.",
+  "servings": 16,
+  "servingWord": "servings",
+  "yieldNote": "Serves 16",
+  "activeTime": 25,
+  "totalTime": 135,
+  "equipment": [
+   "10-inch fluted tube (Bundt) pan",
+   "Electric mixer",
+   "2 large bowls",
+   "Wire rack",
+   "Piping bag (optional)"
+  ],
+  "groups": [
+   {
+    "name": "Cake",
+    "items": [
+     {
+      "key": "cakemix",
+      "qty": 1,
+      "name": "package devil's food cake mix (regular size)",
+      "short": "devil's food cake mix"
+     },
+     {
+      "key": "pudding",
+      "qty": 1,
+      "name": "package (3.9 oz) instant chocolate pudding mix",
+      "short": "instant chocolate pudding mix"
+     },
+     {
+      "key": "sourcream",
+      "qty": 240,
+      "unit": "g",
+      "name": "sour cream",
+      "short": "sour cream",
+      "us": {
+       "qty": 1,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "oil",
+      "qty": 120,
+      "unit": "ml",
+      "name": "canola oil",
+      "short": "canola oil",
+      "us": {
+       "qty": 0.5,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "water",
+      "qty": 120,
+      "unit": "ml",
+      "name": "water",
+      "short": "water",
+      "us": {
+       "qty": 0.5,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "eggs",
+      "qty": 4,
+      "name": "large eggs, at room temperature",
+      "short": "eggs"
+     },
+     {
+      "key": "vanilla",
+      "qty": 3,
+      "unit": "tsp",
+      "name": "vanilla extract",
+      "short": "vanilla"
+     },
+     {
+      "key": "chips",
+      "qty": 170,
+      "unit": "g",
+      "name": "semisweet chocolate chips",
+      "short": "chocolate chips",
+      "us": {
+       "qty": 1,
+       "unit": "cup"
+      }
+     }
+    ]
+   },
+   {
+    "name": "Frosting",
+    "items": [
+     {
+      "key": "fcream",
+      "qty": 225,
+      "unit": "g",
+      "name": "cream cheese, softened",
+      "short": "softened cream cheese",
+      "us": {
+       "qty": 8,
+       "unit": "oz"
+      },
+      "note": "one 8-oz package"
+     },
+     {
+      "key": "fbutter",
+      "qty": 57,
+      "unit": "g",
+      "name": "butter, softened",
+      "short": "softened butter",
+      "us": {
+       "qty": 4,
+       "unit": "tbsp"
+      }
+     },
+     {
+      "key": "fvanilla",
+      "qty": 1.5,
+      "unit": "tsp",
+      "name": "vanilla extract",
+      "short": "vanilla"
+     },
+     {
+      "key": "sugar",
+      "qty": 360,
+      "unit": "g",
+      "name": "confectioners' sugar",
+      "short": "confectioners' sugar",
+      "us": {
+       "qty": 3,
+       "unit": "cup"
+      }
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "title": "Heat the oven",
+    "text": "Heat the oven to 180°C / 160°C fan / gas 4 (350°F). Grease and flour a 10-inch fluted tube pan."
+   },
+   {
+    "title": "Mix the batter",
+    "text": "In a large bowl, combine {cakemix}, {pudding}, {sourcream}, {oil}, {water}, {eggs} and {vanilla}. Beat on low speed for 30 seconds, then on medium for 2 minutes. Stir in {chips}.",
+    "timer": 2
+   },
+   {
+    "title": "Bake",
+    "text": "Scrape the batter into the pan. Bake 35–40 minutes, until a toothpick in the center comes out clean.",
+    "timer": 35
+   },
+   {
+    "title": "Cool",
+    "text": "Cool in the pan for 10 minutes, then turn out onto a wire rack to cool completely.",
+    "timer": 10
+   },
+   {
+    "title": "Make the frosting",
+    "text": "In a large bowl, beat {fcream}, {fbutter} and {fvanilla} until smooth. Gradually beat in {sugar}."
+   },
+   {
+    "title": "Frost",
+    "text": "Pipe or spread the frosting over the top of the cake."
+   }
+  ],
+  "tips": [
+   "For the Nothing Bundt Cakes look, pipe thick stripes of frosting from the center down the sides."
+  ],
+  "makeAhead": [
+   {
+    "title": "Store",
+    "text": "Because of the cream cheese frosting, keep the cake covered in the refrigerator."
+   }
+  ],
+  "nutrition": "Per piece: 460 cal, 23 g fat (10 g sat. fat), 79 mg chol., 370 mg sodium, 61 g carbs (44 g sugars, 1 g fiber), 5 g protein.",
+  "source": "Taste of Home, Double-Take Desserts, p. 110 (Elizabeth Wynne, Aztec, NM)",
+  "image": "img/chocolate-bundt-cake.jpg",
+  "added": "2026-10-23"
+ },
+ {
+  "id": "homemade-ice-cream-sandwiches",
+  "title": "Homemade Ice Cream Sandwiches",
+  "category": "Desserts",
+  "description": "Soft chocolate cookies from a cake mix sandwiched around slabs of ice cream, inspired by Klondike bars.",
+  "servings": 16,
+  "servingWord": "sandwiches",
+  "yieldNote": "Makes 16 sandwiches",
+  "activeTime": 40,
+  "totalTime": 555,
+  "equipment": [
+   "Large bowl",
+   "Waxed paper",
+   "Rolling pin",
+   "Baking sheets",
+   "Wire racks",
+   "Fork"
+  ],
+  "groups": [
+   {
+    "name": "Cookies",
+    "items": [
+     {
+      "key": "cakemix",
+      "qty": 1,
+      "name": "package chocolate cake mix (regular size)",
+      "short": "chocolate cake mix"
+     },
+     {
+      "key": "shortening",
+      "qty": 48,
+      "unit": "g",
+      "name": "shortening",
+      "short": "shortening",
+      "us": {
+       "qty": 0.25,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "butter",
+      "qty": 57,
+      "unit": "g",
+      "name": "butter, softened",
+      "short": "softened butter",
+      "us": {
+       "qty": 0.25,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "egg",
+      "qty": 1,
+      "name": "large egg",
+      "short": "egg"
+     },
+     {
+      "key": "water",
+      "qty": 15,
+      "unit": "ml",
+      "name": "water",
+      "short": "water",
+      "us": {
+       "qty": 1,
+       "unit": "tbsp"
+      }
+     },
+     {
+      "key": "vanilla",
+      "qty": 1,
+      "unit": "tsp",
+      "name": "vanilla extract",
+      "short": "vanilla"
+     }
+    ]
+   },
+   {
+    "name": "Filling",
+    "items": [
+     {
+      "key": "icecream",
+      "qty": 1900,
+      "unit": "ml",
+      "name": "ice cream",
+      "short": "ice cream",
+      "us": {
+       "qty": 0.5,
+       "unit": "gal"
+      },
+      "note": "a rectangular carton slices most easily"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "title": "Make the dough",
+    "text": "In a large bowl, combine {cakemix}, {shortening}, {butter}, {egg}, {water} and {vanilla} until well blended. Divide into 4 equal parts."
+   },
+   {
+    "title": "Heat the oven",
+    "text": "Heat the oven to 180°C / 160°C fan / gas 4 (350°F)."
+   },
+   {
+    "title": "Roll and score",
+    "text": "Between two sheets of waxed paper, roll one part into a 25 × 15 cm (10 × 6-inch) rectangle. Peel off the top sheet, flip the dough onto an ungreased baking sheet and peel off the second sheet. Score into 8 pieces, each 7.5 × 6 cm (3 × 2½ inches). Repeat with the rest of the dough."
+   },
+   {
+    "title": "Bake",
+    "text": "Bake until puffed, 8–10 minutes.",
+    "timer": 10
+   },
+   {
+    "title": "Cut and cool",
+    "text": "Right away, cut along the scored lines and prick holes in each piece with a fork. Cool on wire racks."
+   },
+   {
+    "title": "Assemble",
+    "text": "Cut {icecream} into 16 slices, each 7.5 × 6 × 2.5 cm (3 × 2½ × 1 inch). Sandwich each slice between 2 cookies and wrap in waxed paper or other wrap."
+   },
+   {
+    "title": "Freeze",
+    "text": "Freeze on a baking sheet overnight."
+   }
+  ],
+  "makeAhead": [
+   {
+    "title": "Freeze",
+    "text": "Wrap each sandwich in a double layer of plastic wrap. Keeps in the freezer for up to 3 months."
+   }
+  ],
+  "nutrition": "Per sandwich: 315 cal, 15 g fat (8 g sat. fat), 48 mg chol., 321 mg sodium, 42 g carbs (28 g sugars, 1 g fiber), 4 g protein.",
+  "source": "Taste of Home, Double-Take Desserts, p. 111 (Kea Fisher, Bridger, MT)",
+  "image": "img/homemade-ice-cream-sandwiches.jpg",
+  "added": "2026-10-23"
+ },
+ {
+  "id": "fried-chicken",
+  "title": "Fried Chicken",
+  "category": "Mains",
+  "description": "Crispy, well-seasoned deep-fried chicken inspired by KFC's Original Recipe, good hot or cold the next day.",
+  "servings": 12,
+  "servingWord": "servings",
+  "yieldNote": "Serves 12",
+  "activeTime": 75,
+  "totalTime": 75,
+  "equipment": [
+   "2 large shallow dishes",
+   "Deep-fat fryer (or heavy pot and thermometer)",
+   "Tongs",
+   "Paper towels"
+  ],
+  "groups": [
+   {
+    "name": "Seasoned flour",
+    "items": [
+     {
+      "key": "flour1",
+      "qty": 335,
+      "unit": "g",
+      "name": "all-purpose flour",
+      "short": "flour",
+      "us": {
+       "qty": 2.667,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "garlicsalt",
+      "qty": 2,
+      "unit": "tbsp",
+      "name": "garlic salt",
+      "short": "garlic salt"
+     },
+     {
+      "key": "paprika",
+      "qty": 1,
+      "unit": "tbsp",
+      "name": "paprika",
+      "short": "paprika"
+     },
+     {
+      "key": "pepper1",
+      "qty": 2.5,
+      "unit": "tsp",
+      "name": "black pepper",
+      "short": "pepper"
+     },
+     {
+      "key": "poultry",
+      "qty": 2.5,
+      "unit": "tsp",
+      "name": "poultry seasoning",
+      "short": "poultry seasoning"
+     }
+    ]
+   },
+   {
+    "name": "Egg dip",
+    "items": [
+     {
+      "key": "eggs",
+      "qty": 2,
+      "name": "large eggs",
+      "short": "eggs"
+     },
+     {
+      "key": "water",
+      "qty": 360,
+      "unit": "ml",
+      "name": "water",
+      "short": "water",
+      "us": {
+       "qty": 1.5,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "salt",
+      "qty": 1,
+      "unit": "tsp",
+      "name": "salt",
+      "short": "salt"
+     },
+     {
+      "key": "flour2",
+      "qty": 165,
+      "unit": "g",
+      "name": "all-purpose flour",
+      "short": "flour",
+      "us": {
+       "qty": 1.333,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "pepper2",
+      "qty": 0.5,
+      "unit": "tsp",
+      "name": "black pepper",
+      "short": "pepper"
+     }
+    ]
+   },
+   {
+    "name": "Chicken",
+    "items": [
+     {
+      "key": "chicken",
+      "qty": 2,
+      "name": "broiler/fryer chickens (1.6–1.8 kg / 3½–4 lb each), cut up",
+      "short": "cut-up chickens"
+     },
+     {
+      "name": "Oil for deep-frying"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "title": "Mix the seasoned flour",
+    "text": "In a large shallow dish, combine {flour1}, {garlicsalt}, {paprika}, {pepper1} and {poultry}."
+   },
+   {
+    "title": "Make the egg dip",
+    "text": "In another shallow dish, beat {eggs} and {water}. Stir in {salt}, {flour2} and {pepper2}."
+   },
+   {
+    "title": "Coat the chicken",
+    "text": "Dip the pieces from {chicken} in the egg mixture, then in the flour mixture, a few at a time. Turn to coat."
+   },
+   {
+    "title": "Heat the oil",
+    "text": "Heat the oil in a deep-fat fryer to 190°C (375°F)."
+   },
+   {
+    "title": "Fry",
+    "text": "Fry the chicken a few pieces at a time until golden brown and the juices run clear, 7–8 minutes per side.",
+    "timer": 8
+   },
+   {
+    "title": "Drain",
+    "text": "Drain on paper towels. Repeat with the remaining chicken."
+   }
+  ],
+  "tips": [
+   "Let the oil come back to 190°C / 375°F between batches so the crust stays crisp."
+  ],
+  "makeAhead": [
+   {
+    "title": "Leftovers",
+    "text": "Refrigerate and serve cold the next day. It's just as good that way."
+   }
+  ],
+  "nutrition": "Per 5 oz cooked chicken: 543 cal, 33 g fat (7 g sat. fat), 137 mg chol., 798 mg sodium, 17 g carbs (0 g sugars, 1 g fiber), 41 g protein.",
+  "source": "Taste of Home, p. 76 (Jeanne Schnitzler, Lima, MT)",
+  "image": "img/fried-chicken.jpg",
+  "added": "2026-10-23"
+ },
+ {
+  "id": "easy-no-knead-focaccia",
+  "title": "Easy No-Knead Focaccia",
+  "category": "Breads",
+  "description": "Bubbly, olive-oil-rich focaccia that rises overnight in the fridge, finished with toasted garlic butter.",
+  "servings": 12,
+  "servingWord": "servings",
+  "yieldNote": "Serves 10–12",
+  "activeTime": 30,
+  "totalTime": 615,
+  "equipment": [
+   "Medium bowl",
+   "Very large bowl that fits in the fridge",
+   "Rubber spatula",
+   "Plastic wrap",
+   "2 forks",
+   "13 × 9-inch baking pan or 18 × 13-inch rimmed baking sheet",
+   "Small saucepan",
+   "Microplane",
+   "Pastry brush"
+  ],
+  "groups": [
+   {
+    "name": "Dough",
+    "items": [
+     {
+      "key": "yeast",
+      "qty": 7,
+      "unit": "g",
+      "name": "active dry yeast",
+      "short": "yeast",
+      "us": {
+       "qty": 2.25,
+       "unit": "tsp"
+      },
+      "note": "one ¼-oz envelope"
+     },
+     {
+      "key": "honey",
+      "qty": 2,
+      "unit": "tsp",
+      "name": "honey",
+      "short": "honey"
+     },
+     {
+      "key": "water",
+      "qty": 600,
+      "unit": "ml",
+      "name": "lukewarm water",
+      "short": "lukewarm water",
+      "us": {
+       "qty": 2.5,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "flour",
+      "qty": 625,
+      "unit": "g",
+      "name": "all-purpose flour",
+      "short": "flour",
+      "us": {
+       "qty": 5,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "salt",
+      "qty": 15,
+      "unit": "g",
+      "name": "kosher salt",
+      "short": "kosher salt",
+      "us": {
+       "qty": 5,
+       "unit": "tsp"
+      },
+      "note": "1 tbsp + 2 tsp Diamond Crystal, or 1 tbsp Morton"
+     }
+    ]
+   },
+   {
+    "name": "Pan and topping",
+    "items": [
+     {
+      "key": "oilbowl",
+      "qty": 60,
+      "unit": "ml",
+      "name": "extra-virgin olive oil",
+      "short": "olive oil",
+      "us": {
+       "qty": 4,
+       "unit": "tbsp"
+      },
+      "note": "for the bowl, plus more for your hands"
+     },
+     {
+      "name": "Unsalted butter, for the pan"
+     },
+     {
+      "key": "oilpan",
+      "qty": 15,
+      "unit": "ml",
+      "name": "extra-virgin olive oil",
+      "short": "olive oil",
+      "us": {
+       "qty": 1,
+       "unit": "tbsp"
+      },
+      "note": "for the pan"
+     },
+     {
+      "key": "oiltop",
+      "qty": 15,
+      "unit": "ml",
+      "name": "extra-virgin olive oil",
+      "short": "olive oil",
+      "us": {
+       "qty": 1,
+       "unit": "tbsp"
+      },
+      "note": "for drizzling"
+     },
+     {
+      "name": "Flaky sea salt"
+     }
+    ]
+   },
+   {
+    "name": "Garlic butter",
+    "items": [
+     {
+      "key": "butter",
+      "qty": 57,
+      "unit": "g",
+      "name": "unsalted butter",
+      "short": "unsalted butter",
+      "us": {
+       "qty": 4,
+       "unit": "tbsp"
+      }
+     },
+     {
+      "key": "garlic",
+      "qty": 3,
+      "name": "garlic cloves",
+      "short": "garlic cloves",
+      "note": "2–4, to taste"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "title": "Wake up the yeast",
+    "text": "In a medium bowl, whisk {yeast}, {honey} and {water} to combine. Let sit 5 minutes. It should foam or at least turn creamy. If it doesn't, the yeast is dead and you'll need fresh yeast.",
+    "timer": 5
+   },
+   {
+    "title": "Mix the dough",
+    "text": "Add {flour} and {salt}. Mix with a rubber spatula until a shaggy dough forms and no dry streaks remain."
+   },
+   {
+    "title": "Cold rise",
+    "text": "Pour {oilbowl} into a very large bowl that fits in your fridge. Add the dough and turn to coat. Cover with plastic wrap and chill until doubled and very bubbly, at least 8 hours and up to 1 day.",
+    "timer": 480
+   },
+   {
+    "title": "Prep the pan",
+    "text": "Generously butter a 13 × 9-inch baking pan (thicker focaccia, good for sandwiches) or an 18 × 13-inch rimmed baking sheet (thinner and crispier). Pour {oilpan} into the center."
+   },
+   {
+    "title": "Fold",
+    "text": "Using 2 forks, gather up the edge of the dough farthest from you, lift it up and fold it over into the center. Give the bowl a quarter turn and repeat 3 more times, deflating the dough as you form a rough ball. Transfer to the pan, pour any oil left in the bowl over it, and turn the dough to coat."
+   },
+   {
+    "title": "Second rise",
+    "text": "Let rise uncovered in a dry, warm spot (like the top of the fridge or near a preheating oven) until doubled, at least 1½ hours and up to 4 hours.",
+    "timer": 90
+   },
+   {
+    "title": "Heat the oven and test",
+    "text": "Set a rack in the middle of the oven and heat to 230°C / 210°C fan / gas 8 (450°F). Poke the dough with a finger: it should spring back slowly and leave a small dent. If it springs back quickly, give it longer."
+   },
+   {
+    "title": "Dimple",
+    "text": "Lightly oil your hands. On a baking sheet, gently stretch the dough to fill it. Dimple the dough all over with your fingers, pressing all the way to the bottom of the pan. Drizzle with {oiltop} and sprinkle with flaky sea salt."
+   },
+   {
+    "title": "Bake",
+    "text": "Bake until puffed and golden brown all over, 20–30 minutes.",
+    "timer": 25
+   },
+   {
+    "title": "Garlic butter",
+    "text": "Melt {butter} in a small saucepan over medium heat. Take it off the heat and grate in {garlic} with a Microplane. Return to medium heat and cook, stirring often, until the garlic is lightly toasted, 30–45 seconds. Brush over the focaccia, slice and serve."
+   }
+  ],
+  "tips": [
+   "No kneading or special equipment needed. The long, cold rise in the fridge does the work.",
+   "Oil your hands, not flour, when handling the dough."
+  ],
+  "makeAhead": [
+   {
+    "title": "Plan ahead",
+    "text": "Mix the dough the day before. It can wait in the fridge for up to 1 day before folding and the second rise."
+   }
+  ],
+  "source": "Bon Appétit, Winter 2026, p. 38 (The Bon Appétit 56)",
+  "image": "img/easy-no-knead-focaccia.jpg",
+  "added": "2026-10-23"
  }
 ]
