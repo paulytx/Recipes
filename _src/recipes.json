@@ -8394,5 +8394,170 @@
   "source": "Magazine clipping, Thanksgiving 2026, p. 20 (Shilpa Uskokovic)",
   "image": "img/steak-bites-spinach-couscous.jpg",
   "added": "2026-10-21"
+ },
+ {
+  "id": "broccoli-and-cheddar-soup",
+  "title": "Broccoli and Cheddar Soup",
+  "category": "Soups",
+  "description": "A thick, roux-based broccoli soup loaded with very sharp Cheddar, blended as smooth or chunky as you like.",
+  "servings": 6,
+  "servingWord": "servings",
+  "yieldNote": "Serves 4–6",
+  "activeTime": 25,
+  "totalTime": 60,
+  "equipment": [
+   "Large heavy-bottomed pot",
+   "Whisk",
+   "Hand blender or blender"
+  ],
+  "groups": [
+   {
+    "name": "Soup",
+    "items": [
+     {
+      "key": "butter",
+      "qty": 85,
+      "unit": "g",
+      "name": "unsalted butter",
+      "short": "butter",
+      "us": {
+       "qty": 6,
+       "unit": "tbsp"
+      },
+      "note": "used in two batches"
+     },
+     {
+      "key": "onion",
+      "qty": 1,
+      "name": "large yellow onion, finely chopped",
+      "short": "chopped onion"
+     },
+     {
+      "key": "garlic",
+      "qty": 2,
+      "name": "garlic cloves, finely chopped",
+      "short": "chopped garlic"
+     },
+     {
+      "key": "broccoli",
+      "qty": 900,
+      "unit": "g",
+      "name": "broccoli, cut into florets, stems peeled and trimmed to 7.5 cm (3 in)",
+      "short": "broccoli",
+      "us": {
+       "qty": 2,
+       "unit": "lb"
+      }
+     },
+     {
+      "key": "flour",
+      "qty": 30,
+      "unit": "g",
+      "name": "all-purpose flour",
+      "short": "flour",
+      "us": {
+       "qty": 0.25,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "broth",
+      "qty": 720,
+      "unit": "ml",
+      "name": "low-sodium chicken or vegetable broth",
+      "short": "broth",
+      "us": {
+       "qty": 3,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "halfhalf",
+      "qty": 480,
+      "unit": "ml",
+      "name": "half-and-half",
+      "short": "half-and-half",
+      "us": {
+       "qty": 2,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "cheddar",
+      "qty": 225,
+      "unit": "g",
+      "name": "very sharp Cheddar, grated",
+      "short": "grated Cheddar",
+      "us": {
+       "qty": 8,
+       "unit": "oz"
+      },
+      "note": "plus more for topping"
+     },
+     {
+      "key": "nutmeg",
+      "qty": 0.25,
+      "unit": "tsp",
+      "name": "freshly grated nutmeg",
+      "short": "nutmeg"
+     },
+     {
+      "name": "Kosher salt and freshly ground black pepper"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "title": "Soften the onion",
+    "text": "Melt half the {butter} in a large heavy-bottomed pot over medium heat. Add {onion} and {garlic}, season with salt and pepper, and cook, stirring now and then, until the onion is soft and translucent, 5–8 minutes.",
+    "timer": 8
+   },
+   {
+    "title": "Cook the broccoli",
+    "text": "Add {broccoli}, season with salt and pepper, and cook, stirring now and then, until bright green and just tender, 8–10 minutes. Scoop the broccoli mixture into a bowl and set aside.",
+    "timer": 10
+   },
+   {
+    "title": "Make the roux",
+    "text": "Melt the rest of the butter in the same pot over medium heat (leftover broccoli bits are fine). Add {flour} and whisk constantly until pale golden, 2–3 minutes.",
+    "timer": 3
+   },
+   {
+    "title": "Add the liquids",
+    "text": "Slowly whisk in {broth} until smooth; it will thicken a lot at first. Whisk in {halfhalf}, bring to a simmer, then stir in {cheddar}, {nutmeg} and all but about 1 cup of the broccoli mixture."
+   },
+   {
+    "title": "Simmer",
+    "text": "Turn the heat to low and simmer until the soup has reduced by about a quarter and the broccoli is completely tender, 25–30 minutes.",
+    "timer": 30
+   },
+   {
+    "title": "Blend",
+    "text": "Purée with a hand blender (or in batches in a blender) until as smooth or chunky as you like."
+   },
+   {
+    "title": "Season and serve",
+    "text": "Season with salt and pepper and ladle into bowls. Top with the reserved broccoli, extra Cheddar if you like, and plenty of black pepper."
+   }
+  ],
+  "variations": [
+   "Use vegetable broth to make it vegetarian.",
+   "Leave it chunky with bits of broccoli, or blend fully smooth."
+  ],
+  "tips": [
+   "Use the sharpest Cheddar you can find, white or orange; it adds richness and a needed tang.",
+   "Add the broth gradually and keep whisking so the roux doesn't lump.",
+   "If using a blender, fill it no more than halfway with hot soup and hold the lid down with a towel."
+  ],
+  "makeAhead": [
+   {
+    "title": "Fridge",
+    "text": "Keeps up to 3 days in the fridge. Reheat gently over low heat, stirring, and add a splash of broth if it has thickened. Dairy-heavy soups can turn grainy if frozen."
+   }
+  ],
+  "source": "NYT Cooking, Alison Roman",
+  "image": "img/broccoli-and-cheddar-soup.jpg",
+  "added": "2026-10-23"
  }
 ]
