@@ -89,8 +89,11 @@ button:focus-visible, input:focus-visible, a:focus-visible { outline: 2px solid 
 .group + .group { margin-top: 16px }
 .group .label { display: block; margin-bottom: 6px }
 .ing ul { list-style: none; margin: 0; padding: 0 }
-.ing li label { display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 10px; padding: 7px 0; border-bottom: 1px dashed var(--line); cursor: pointer }
-.ing li:last-child label { border-bottom: 0 }
+.ing li { display: flex; align-items: flex-start; gap: 6px; border-bottom: 1px dashed var(--line) }
+.ing li:last-child { border-bottom: 0 }
+.ing li label { flex: 1; min-width: 0; display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 10px; padding: 7px 0; cursor: pointer }
+.heb { flex: none; margin-top: 3px; width: 32px; height: 28px; border: 1px solid var(--line); border-radius: 8px; background: transparent; color: var(--muted); font-size: 15px; line-height: 1; cursor: pointer }
+.heb.sent { background: var(--accent-soft); color: var(--accent); border-color: transparent }
 .ing input { margin: 4px 0 0; accent-color: var(--accent); width: 16px; height: 16px }
 .ing .q { font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap }
 .ing .note { color: var(--muted); font-size: 14px }
@@ -389,7 +392,7 @@ function renderRecipe(r) {
         <h2>Ingredients</h2>
         ${r.groups.map(g => `<div class="group"><span class="label">${esc(g.name)}</span><ul>${g.items.map(i => { const id = n++, on = checked.includes(id); return `
           <li class="${on ? "done" : ""}"><label><input type="checkbox" id="ing-${r.id}-${id}" data-chk="${id}" ${on ? "checked" : ""}>
-          <span class="txt">${i.qty != null ? `<span class="q">${amount(i, f)}</span> ` : ""}${esc(i.name)}${i.note ? ` <span class="note">(${esc(i.note)})</span>` : ""}</span></label></li>` }).join("")}</ul></div>`).join("")}
+          <span class="txt">${i.qty != null ? `<span class="q">${amount(i, f)}</span> ` : ""}${esc(i.name)}${i.note ? ` <span class="note">(${esc(i.note)})</span>` : ""}</span></label>${IOS ? `<button class="heb" type="button" data-heb="${esc(i.name)}" aria-label="Add ${esc(i.name)} to H-E-B list" title="Add to H-E-B list">🛒</button>` : ""}</li>` }).join("")}</ul></div>`).join("")}
         ${r.equipment?.length ? `<div class="group"><span class="label">Equipment</span><div class="note">${r.equipment.map(esc).join(" · ")}</div></div>` : ""}
       </aside>
       <section class="method">
@@ -469,6 +472,8 @@ function sharedView() { return location.hash.startsWith("#s/") }
 function current() { const h = location.hash.slice(1).replace(/^s\//, ""); return RECIPES.find(r => r.id === h) }
 function route() { const r = current(); closeCook(); shareOpen = false; r ? renderRecipe(r) : renderIndex(); window.scrollTo(0, 0); tick() }
 window.addEventListener("hashchange", route);
+// iPhone/iPad only: cart button next to each ingredient runs the "Add to HEB" Shortcut
+var IOS = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
 
 document.addEventListener("click", e => {
   const t = e.target.closest("button"); if (!t) return;
@@ -486,6 +491,7 @@ document.addEventListener("click", e => {
   else if (t.hasAttribute("data-sharepdf")) savePDF(r);
   else if (t.hasAttribute("data-closecook")) closeCook();
   else if (t.dataset.cook != null) openCook(r, +t.dataset.cook);
+  else if (t.dataset.heb) { location.href = "shortcuts://x-callback-url/run-shortcut?name=" + encodeURIComponent("Add to HEB") + "&input=text&text=" + encodeURIComponent(t.dataset.heb) + "&x-success=" + encodeURIComponent(location.href); t.classList.add("sent"); t.textContent = "✓" }
 });
 document.addEventListener("change", e => {
   const c = e.target; if (!c.dataset.chk) return;
