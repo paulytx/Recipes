@@ -81,6 +81,8 @@ button:focus-visible, input:focus-visible, a:focus-visible { outline: 2px solid 
 .week .ing { background: none; border: 0; padding: 0; position: static }
 .week .group + .group { margin-top: 18px }
 .week .group .label { color: var(--accent) }
+.week-msg { color: var(--accent); font-size: 14px; font-weight: 600 }
+.week-acts { display: flex; flex-wrap: wrap; gap: 8px }
 .clearweek { border: 1px solid var(--line); background: transparent; padding: 6px 12px; border-radius: 999px; font-size: 14px; color: var(--muted) }
 .share { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 14px; margin-bottom: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px }
 .share p { flex: 1 1 100%; margin: 0; font-size: 14px; color: var(--muted) }
@@ -358,17 +360,36 @@ function renderIndex() {
         <span class="facts"><span><b>${mins(r.totalTime)}</b> total</span><span><b>${r.servings}</b> ${esc(r.servingWord)}</span></span>
         </span>
       </button>`).join("") || `<p class="empty">${filter === WK && !week.length ? "No recipes picked yet. Open a recipe and tap ＋ This week." : "No recipes match that search."}</p>`}</div>
-    ${filter === WK && week.length ? weekList(week) : ""}
+    ${filter === WK ? weekList(week) : ""}
     <p class="howto">To add a recipe, send Claude a screenshot or PDF in this project and ask to add it to the recipe book.</p>`;
   const s = $("#search");
   s.addEventListener("input", e => { query = e.target.value; const pos = e.target.selectionStart; renderIndex(); const n = $("#search"); n.focus(); n.setSelectionRange(pos, pos) });
 }
 
 /* ---------- this week: picked recipes + combined ingredient list (saved on this device) ---------- */
+let weekMsg = "";
+function weekLink() { return BOOK_URL + "#week=" + weekIds().join(",") }
+function sendWeek() {
+  const url = weekLink(), copy = () => navigator.clipboard.writeText(url).then(() => { $("#week-msg").textContent = "Link copied. Paste it into a text to yourself." }, () => prompt("Copy this link:", url));
+  if (!navigator.share) return copy();
+  navigator.share({ title: "This week's recipes", url }).catch(e => { if (e?.name !== "AbortError") copy() });
+}
+function loadWeek(ids) {
+  ids = ids.filter(id => RECIPES.some(r => r.id === id));
+  store.set("week", ids); filter = "This week"; weekMsg = `Loaded ${ids.length} recipe${ids.length === 1 ? "" : "s"} for this week.`;
+}
+async function pasteWeek() { // for the Home Screen app, which links from Messages can't open
+  let txt = ""; try { txt = await navigator.clipboard.readText() } catch {}
+  if (!txt.includes("#week=")) txt = prompt("Paste the link you sent from your other device:") || "";
+  const m = txt.match(/#week=([^\s]*)/);
+  if (!m) { weekMsg = txt ? "That isn't a This week link." : ""; return renderIndex() }
+  loadWeek(decodeURIComponent(m[1]).split(",")); renderIndex();
+}
 function weekIds() { return store.get("week", []).filter(id => RECIPES.some(r => r.id === id)) }
 function weekList(ids) {
   return `<section class="week" aria-label="Shopping list for this week">
-    <div class="week-head"><h2>Shopping list</h2><button class="clearweek" data-clearweek>Clear week</button>
+    <div class="week-head"><h2>Shopping list</h2><span class="week-acts">${ids.length ? `<button class="clearweek" data-sendweek>Send to my other device</button>` : ""}<button class="clearweek" data-pasteweek>Paste from other device</button>${ids.length ? `<button class="clearweek" data-clearweek>Clear week</button>` : ""}</span>
+      <p class="week-msg" id="week-msg" role="status">${weekMsg}</p>
       <p>Everything for this week's recipes, at each recipe's current servings. Tick what you already have.</p></div>
     <div class="ing">${ids.map(id => { const r = RECIPES.find(x => x.id === id), f = factor(r), checked = store.get("chk-" + r.id, []); let n = 0;
       return `<div class="group"><span class="label">${esc(r.title)}</span><ul>${r.groups.flatMap(g => g.items).map(i => { const k = n++, on = checked.includes(k); return `
@@ -495,7 +516,12 @@ function closeCook() { $("#cook").hidden = true; try { wake?.release() } catch {
 /* ---------- routing & events ---------- */
 function sharedView() { return location.hash.startsWith("#s/") }
 function current() { const h = location.hash.slice(1).replace(/^s\//, ""); return RECIPES.find(r => r.id === h) }
-function route() { const r = current(); closeCook(); shareOpen = false; r ? renderRecipe(r) : renderIndex(); window.scrollTo(0, 0); tick() }
+function route() {
+  if (location.hash.startsWith("#week=")) { // opened a "Send to my other device" link: replace this device's picks
+    loadWeek(decodeURIComponent(location.hash.slice(6)).split(","));
+    history.replaceState(null, "", location.pathname + location.search);
+  } else weekMsg = "";
+  const r = current(); closeCook(); shareOpen = false; r ? renderRecipe(r) : renderIndex(); window.scrollTo(0, 0); tick() }
 window.addEventListener("hashchange", route);
 document.addEventListener("click", e => { const a = e.target.closest("button.heb"); if (!a) return; e.stopPropagation();
   if (a.classList.contains("sent")) { a.classList.remove("sent"); a.textContent = "🛒" } // tap ✓ again to undo, no search
@@ -519,6 +545,8 @@ document.addEventListener("click", e => {
   else if (t.hasAttribute("data-sharepdf")) savePDF(r);
   else if (t.hasAttribute("data-closecook")) closeCook();
   else if (t.hasAttribute("data-week")) { const w = weekIds(); store.set("week", w.includes(r.id) ? w.filter(x => x !== r.id) : [...w, r.id]); const on = !w.includes(r.id); t.setAttribute("aria-pressed", on); t.textContent = on ? "✓ This week" : "＋ This week" }
+  else if (t.hasAttribute("data-sendweek")) sendWeek();
+  else if (t.hasAttribute("data-pasteweek")) pasteWeek();
   else if (t.hasAttribute("data-clearweek")) { if (confirm("Clear this week's recipes?")) { store.set("week", []); renderIndex() } }
   else if (t.dataset.cook != null) openCook(r, +t.dataset.cook);
 });
