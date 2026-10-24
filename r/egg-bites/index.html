@@ -73,6 +73,15 @@ button:focus-visible, input:focus-visible, a:focus-visible { outline: 2px solid 
 .seg button[aria-pressed="true"] { background: var(--surface); color: var(--fg); box-shadow: 0 1px 2px rgb(0 0 0 / .12) }
 .sharebtn { border: 1px solid var(--line); background: var(--surface); padding: 9px 16px; border-radius: 10px; font-weight: 700; color: var(--accent) }
 .sharebtn[aria-expanded="true"] { border-color: var(--accent); background: var(--accent-soft) }
+.sharebtn[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft) }
+.week { margin-top: 28px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px; max-width: 720px }
+.week-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; margin-bottom: 6px }
+.week-head h2 { font-size: 24px }
+.week-head p { margin: 0; color: var(--muted); font-size: 14px; flex-basis: 100% }
+.week .ing { background: none; border: 0; padding: 0; position: static }
+.week .group + .group { margin-top: 18px }
+.week .group .label { color: var(--accent) }
+.clearweek { border: 1px solid var(--line); background: transparent; padding: 6px 12px; border-radius: 999px; font-size: 14px; color: var(--muted) }
 .share { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 14px; margin-bottom: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px }
 .share p { flex: 1 1 100%; margin: 0; font-size: 14px; color: var(--muted) }
 .share button { border: 1px solid var(--line); background: var(--sunk); border-radius: 10px; padding: 9px 14px; font-weight: 600 }
@@ -328,16 +337,17 @@ async function savePDF(r) {
 
 /* ---------- views ---------- */
 function renderIndex() {
-  const cats = ["All", ...new Set(RECIPES.map(r => r.category))];
+  const week = weekIds(), WK = "This week";
+  const cats = ["All", WK, ...new Set(RECIPES.map(r => r.category))];
   const q = query.trim().toLowerCase();
-  const list = RECIPES.filter(r => (filter === "All" || r.category === filter) &&
+  const list = RECIPES.filter(r => (filter === "All" || (filter === WK ? week.includes(r.id) : r.category === filter)) &&
     (!q || (r.title + " " + r.description + " " + r.groups.flatMap(g => g.items.map(i => i.name)).join(" ")).toLowerCase().includes(q)));
   $("#app").innerHTML = `
     <header class="masthead">
       <div><span class="label">${RECIPES.length} recipe${RECIPES.length === 1 ? "" : "s"}</span><h1>Pauly's Recipe Book</h1></div>
       <input class="search" id="search" type="search" placeholder="Search recipes or ingredients" value="${esc(query)}" aria-label="Search recipes">
     </header>
-    <div class="chips">${cats.map(c => `<button class="chip" data-cat="${esc(c)}" aria-pressed="${c === filter}">${esc(c)}</button>`).join("")}</div>
+    <div class="chips">${cats.map(c => `<button class="chip" data-cat="${esc(c)}" aria-pressed="${c === filter}">${esc(c)}${c === WK ? ` (${week.length})` : ""}</button>`).join("")}</div>
     <div class="grid">${list.map(r => `
       <button class="card" data-open="${r.id}">
         ${r.image ? `<img class="ph" src="${r.image}" alt="">` : `<span class="ph-none" aria-hidden="true">${esc(r.title[0])}</span>`}
@@ -347,10 +357,24 @@ function renderIndex() {
         <p>${esc(r.description)}</p>
         <span class="facts"><span><b>${mins(r.totalTime)}</b> total</span><span><b>${r.servings}</b> ${esc(r.servingWord)}</span></span>
         </span>
-      </button>`).join("") || `<p class="empty">No recipes match that search.</p>`}</div>
+      </button>`).join("") || `<p class="empty">${filter === WK && !week.length ? "No recipes picked yet. Open a recipe and tap ＋ This week." : "No recipes match that search."}</p>`}</div>
+    ${filter === WK && week.length ? weekList(week) : ""}
     <p class="howto">To add a recipe, send Claude a screenshot or PDF in this project and ask to add it to the recipe book.</p>`;
   const s = $("#search");
   s.addEventListener("input", e => { query = e.target.value; const pos = e.target.selectionStart; renderIndex(); const n = $("#search"); n.focus(); n.setSelectionRange(pos, pos) });
+}
+
+/* ---------- this week: picked recipes + combined ingredient list (saved on this device) ---------- */
+function weekIds() { return store.get("week", []).filter(id => RECIPES.some(r => r.id === id)) }
+function weekList(ids) {
+  return `<section class="week" aria-label="Shopping list for this week">
+    <div class="week-head"><h2>Shopping list</h2><button class="clearweek" data-clearweek>Clear week</button>
+      <p>Everything for this week's recipes, at each recipe's current servings. Tick what you already have.</p></div>
+    <div class="ing">${ids.map(id => { const r = RECIPES.find(x => x.id === id), f = factor(r), checked = store.get("chk-" + r.id, []); let n = 0;
+      return `<div class="group"><span class="label">${esc(r.title)}</span><ul>${r.groups.flatMap(g => g.items).map(i => { const k = n++, on = checked.includes(k); return `
+        <li class="${on ? "done" : ""}"><label><input type="checkbox" data-r="${r.id}" data-chk="${k}" ${on ? "checked" : ""}>
+        <span class="txt">${i.qty != null ? `<span class="q">${amount(i, f)}</span> ` : ""}${esc(i.name)}${i.note ? ` <span class="note">(${esc(i.note)})</span>` : ""}</span></label>${IOS ? `<button class="heb" type="button" data-heb="${esc(i.name)}" aria-label="Find ${esc(i.name)} at H-E-B" title="Find at H-E-B">🛒</button>` : ""}</li>` }).join("")}</ul></div>` }).join("")}</div>
+  </section>`;
 }
 
 function renderRecipe(r) {
@@ -378,6 +402,7 @@ function renderRecipe(r) {
         <button data-units="us" aria-pressed="${units === "us"}">US</button><button data-units="metric" aria-pressed="${units === "metric"}">Metric</button>
       </div>
       <button class="sharebtn" data-share aria-expanded="${shareOpen}" aria-controls="share-panel">Share</button>
+      <button class="sharebtn" data-week aria-pressed="${weekIds().includes(r.id)}">${weekIds().includes(r.id) ? "✓ This week" : "＋ This week"}</button>
       <button class="cookbtn" data-cook="0">Start cooking</button>
     </div>
     <div class="share" id="share-panel" ${shareOpen ? "" : "hidden"}>
@@ -493,11 +518,13 @@ document.addEventListener("click", e => {
   else if (t.hasAttribute("data-sharecopy")) copyRecipe(r);
   else if (t.hasAttribute("data-sharepdf")) savePDF(r);
   else if (t.hasAttribute("data-closecook")) closeCook();
+  else if (t.hasAttribute("data-week")) { const w = weekIds(); store.set("week", w.includes(r.id) ? w.filter(x => x !== r.id) : [...w, r.id]); const on = !w.includes(r.id); t.setAttribute("aria-pressed", on); t.textContent = on ? "✓ This week" : "＋ This week" }
+  else if (t.hasAttribute("data-clearweek")) { if (confirm("Clear this week's recipes?")) { store.set("week", []); renderIndex() } }
   else if (t.dataset.cook != null) openCook(r, +t.dataset.cook);
 });
 document.addEventListener("change", e => {
   const c = e.target; if (!c.dataset.chk) return;
-  const r = current(), k = "chk-" + r.id; let arr = store.get(k, []);
+  const r = c.dataset.r ? RECIPES.find(x => x.id === c.dataset.r) : current(), k = "chk-" + r.id; let arr = store.get(k, []);
   arr = c.checked ? [...arr, +c.dataset.chk] : arr.filter(x => x !== +c.dataset.chk);
   store.set(k, arr); c.closest("li").classList.toggle("done", c.checked);
 });
