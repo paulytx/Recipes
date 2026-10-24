@@ -6080,16 +6080,16 @@
  },
  {
   "id": "creamy-lobster-linguine",
-  "title": "Creamy Lobster Linguine",
+  "title": "Creamy Shrimp Linguine",
   "category": "Mains",
-  "description": "Linguine in a silky cream sauce built on a quick stock infused with the lobster shell, tarragon and fennel seed, finished with chives, parmesan and Aleppo pepper.",
+  "description": "Linguine in a silky cream sauce built on a quick stock infused with the shrimp shells, tarragon and fennel seed, finished with chives, parmesan and Aleppo pepper.",
   "servings": 2,
   "servingWord": "servings",
   "yieldNote": "Serves 2",
   "activeTime": 30,
   "totalTime": 65,
   "equipment": [
-   "Lobster crackers or a heavy knife",
+   "Kitchen scissors (optional, for peeling)",
    "2 saucepans",
    "Large pot for the pasta",
    "Fine sieve",
@@ -6097,14 +6097,19 @@
   ],
   "groups": [
    {
-    "name": "Lobster and infused stock",
+    "name": "Shrimp and infused stock",
     "items": [
      {
-      "key": "lobster",
-      "qty": 1,
-      "name": "whole cooked lobster",
-      "short": "lobster",
-      "note": "or 2 cooked lobster tails"
+      "key": "shrimp",
+      "qty": 340,
+      "unit": "g",
+      "name": "large raw shrimp, shell on",
+      "short": "shrimp",
+      "us": {
+       "qty": 0.75,
+       "unit": "lb"
+      },
+      "note": "shells are used for the stock"
      },
      {
       "key": "stock",
@@ -6218,12 +6223,12 @@
   ],
   "steps": [
    {
-    "title": "Pick the lobster",
-    "text": "Take the meat out of {lobster}. If it's a whole lobster, crack the claws and carefully remove that meat too. Keep the meat chilled and save the shell."
+    "title": "Peel the shrimp",
+    "text": "Peel and devein {shrimp}, keeping the shells. Keep the shrimp chilled."
    },
    {
     "title": "Infuse the stock",
-    "text": "Put {stock} in a pan with {garlic}, the tarragon stalks, {fennel}, {peppercorns}, the lobster shell and {shallot1}. Cover and simmer for 20 minutes, then take off the heat and leave to infuse. Meanwhile, chop 1 tbsp of the tarragon leaves.",
+    "text": "Put {stock} in a pan with {garlic}, the tarragon stalks, {fennel}, {peppercorns}, the shrimp shells and {shallot1}. Cover and simmer for 20 minutes, then take off the heat and leave to infuse. Meanwhile, chop 1 tbsp of the tarragon leaves.",
     "timer": 20
    },
    {
@@ -6243,7 +6248,8 @@
    },
    {
     "title": "Bring it together",
-    "text": "Cut the lobster meat into bite-size pieces and stir into the sauce until just heated through. Add the linguine and toss, then add {chives}, the chopped tarragon and {parmesan} and toss again. Add a splash of cooking water if needed. The sauce should be loose and silky."
+    "text": "Add the shrimp to the sauce and simmer gently, stirring, until pink and just cooked through, 2–3 minutes. Add the linguine and toss, then add {chives}, the chopped tarragon and {parmesan} and toss again. Add a splash of cooking water if needed. The sauce should be loose and silky.",
+    "timer": 3
    },
    {
     "title": "Serve",
@@ -6251,8 +6257,8 @@
    }
   ],
   "tips": [
-   "Don't skip simmering the shell in the stock. That's where most of the lobster flavor in the sauce comes from.",
-   "Don't let the lobster boil in the sauce. It's already cooked and turns tough if overheated.",
+   "Don't skip simmering the shells in the stock. That's where most of the shrimp flavor in the sauce comes from.",
+   "Take the shrimp off the heat as soon as they turn pink. They get rubbery if overcooked.",
    "No Aleppo pepper? A small pinch of regular red pepper flakes works.",
    "The original recipe has you chop tarragon leaves but never says when to add them. Stirring them in with the chives works well."
   ],
@@ -6856,9 +6862,9 @@
  },
  {
   "id": "smoky-lamb-spiced-yogurt",
-  "title": "Smoky Lamb with Spiced Yogurt",
+  "title": "Smoky Ground Meat with Spiced Yogurt",
   "category": "Mains",
-  "description": "Cumin-spiced ground lamb spooned over smoked-paprika yogurt, topped with cucumber, parsley and red onion and scooped up with warm pita.",
+  "description": "Cumin-spiced ground turkey or beef spooned over smoked-paprika yogurt, topped with cucumber, parsley and red onion and scooped up with warm pita.",
   "servings": 4,
   "servingWord": "servings",
   "yieldNote": "Serves 4",
@@ -6921,7 +6927,7 @@
     ]
    },
    {
-    "name": "Lamb",
+    "name": "Meat",
     "items": [
      {
       "key": "onion1",
@@ -6953,8 +6959,8 @@
       "key": "lamb",
       "qty": 450,
       "unit": "g",
-      "name": "ground lamb or ground beef, preferably 10% fat",
-      "short": "ground lamb",
+      "name": "ground turkey or ground beef, preferably 10% fat",
+      "short": "ground meat",
       "us": {
        "qty": 1,
        "unit": "lb"
@@ -7021,22 +7027,22 @@
     "text": "Add {garlic2}, {cumin} and {sugar} and cook, stirring, just until fragrant, about 30 seconds."
    },
    {
-    "title": "Cook the lamb",
+    "title": "Cook the meat",
     "text": "Turn the heat to medium-low. Add {lamb} and {salt2} and press into an even layer. Break it into marble-size pieces with a wooden spoon, then cook mostly undisturbed until cooked through underneath and it lifts easily from the pan, 5–7 minutes. It shouldn't get deeply browned.",
     "timer": 6
    },
    {
-    "title": "Finish the lamb",
+    "title": "Finish the meat",
     "text": "Stir and keep cooking, stirring constantly, until just cooked through, about 1 minute more. Take off the heat, taste and add more salt if needed. Spoon off any excess fat.",
     "timer": 1
    },
    {
     "title": "Serve",
-    "text": "Spread the spiced yogurt in shallow bowls and spoon the lamb on top. Top with {cucumbers}, {parsley} and {onion2}, and serve with warm pitas."
+    "text": "Spread the spiced yogurt in shallow bowls and spoon the meat on top. Top with {cucumbers}, {parsley} and {onion2}, and serve with warm pitas."
    }
   ],
   "variations": [
-   "Ground beef works in place of lamb.",
+   "If using turkey, dark-meat ground turkey stays juicier than all-white.",
    "For a sweet contrast, add pomegranate seeds, a drizzle of hot honey and a few mint leaves."
   ],
   "tips": [
