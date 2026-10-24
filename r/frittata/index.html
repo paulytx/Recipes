@@ -472,7 +472,9 @@ function sharedView() { return location.hash.startsWith("#s/") }
 function current() { const h = location.hash.slice(1).replace(/^s\//, ""); return RECIPES.find(r => r.id === h) }
 function route() { const r = current(); closeCook(); shareOpen = false; r ? renderRecipe(r) : renderIndex(); window.scrollTo(0, 0); tick() }
 window.addEventListener("hashchange", route);
-document.addEventListener("click", e => { const a = e.target.closest("a.heb"); if (a) { a.classList.add("sent"); a.textContent = "✓" } });
+document.addEventListener("click", e => { const a = e.target.closest("a.heb"); if (!a) return;
+  if (a.classList.contains("sent")) { e.preventDefault(); a.classList.remove("sent"); a.textContent = "🛒" } // tap ✓ again to undo
+  else { a.classList.add("sent"); a.textContent = "✓" } });
 // iPhone/iPad only: cart button next to each ingredient opens an H-E-B search for it
 var IOS = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
 
