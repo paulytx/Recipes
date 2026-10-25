@@ -514,6 +514,15 @@ function tick() {
   tray.innerHTML = list.map(([k, t]) => `<div class="t ${t.done ? "done" : ""}"><span>${esc(t.label)}</span><b>${t.done ? "Done" : fmtLeft(t.end - now)}</b><button data-clear="${k}">${t.done ? "Dismiss" : "Cancel"}</button></div>`).join("");
 }
 setInterval(tick, 1000);
+/* ---------- keep the screen awake while the book is open ---------- */
+let wakeLock;
+async function keepAwake() {
+  if (wakeLock || document.visibilityState !== "visible" || !navigator.wakeLock) return;
+  try { wakeLock = await navigator.wakeLock.request("screen"); wakeLock.addEventListener("release", () => { wakeLock = null }) } catch {}
+}
+keepAwake();
+document.addEventListener("visibilitychange", keepAwake);
+document.addEventListener("pointerdown", keepAwake, { passive: true });
 
 /* ---------- cook mode ---------- */
 let wake;
