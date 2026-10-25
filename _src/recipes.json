@@ -9938,9 +9938,13 @@
     "timer": 30
    },
    {
-    "title": "Rest and carve",
-    "text": "Move the chicken to a carving board and let it rest, uncovered, for 20 minutes. Don't wash the skillet if you're making a pan sauce; make it while the chicken rests. Carve and serve with the sauce.",
+    "title": "Rest",
+    "text": "Move the chicken to a carving board and let it rest, uncovered, for 20 minutes. Don't wash the skillet if you're making a pan sauce; make it while the chicken rests.",
     "timer": 20
+   },
+   {
+    "title": "Carve",
+    "text": "Cut through the skin where the leg meets the breast and pull the leg quarter away. Push up on the joint, then cut through it to remove the leg. Cut through the joint between the drumstick and thigh. Repeat with the other leg. Cut down along one side of the breastbone, pulling the breast meat away from the bone as you go; repeat on the other side. Cut through the wing joint to separate each wing from its breast, then slice the breasts. Serve with the pan sauce."
    },
    {
     "title": "Tarragon-lemon pan sauce",
