@@ -9730,5 +9730,236 @@
   "source": "Bon Appétit, Winter 2026, p. 38 (The Bon Appétit 56)",
   "image": "img/easy-no-knead-focaccia.jpg",
   "added": "2026-10-23"
+ },
+ {
+  "id": "weeknight-roast-chicken",
+  "title": "Weeknight Roast Chicken",
+  "category": "Mains",
+  "description": "A simple whole chicken roasted in a preheated skillet, then left to finish in the turned-off oven for juicy meat, with a quick tarragon-lemon or thyme-sherry vinegar pan sauce.",
+  "servings": 4,
+  "servingWord": "servings",
+  "yieldNote": "Serves 4",
+  "activeTime": 25,
+  "totalTime": 105,
+  "equipment": [
+   "12-inch ovensafe skillet",
+   "Paper towels",
+   "Kitchen twine",
+   "Instant-read thermometer",
+   "Carving board",
+   "Large spoon",
+   "Wooden spoon",
+   "Whisk"
+  ],
+  "groups": [
+   {
+    "name": "Chicken",
+    "items": [
+     {
+      "key": "salt",
+      "qty": 1,
+      "unit": "tbsp",
+      "name": "kosher salt",
+      "short": "kosher salt"
+     },
+     {
+      "key": "pepper",
+      "qty": 0.5,
+      "unit": "tsp",
+      "name": "ground black pepper",
+      "short": "black pepper"
+     },
+     {
+      "key": "chicken",
+      "qty": 1,
+      "name": "whole chicken (1.6–1.8 kg / 3½–4 lb), giblets removed",
+      "short": "whole chicken"
+     },
+     {
+      "key": "oil",
+      "qty": 15,
+      "unit": "ml",
+      "name": "olive oil",
+      "short": "olive oil",
+      "us": {
+       "qty": 1,
+       "unit": "tbsp"
+      }
+     }
+    ]
+   },
+   {
+    "name": "Tarragon-lemon pan sauce (optional)",
+    "items": [
+     {
+      "key": "shallot1",
+      "qty": 1,
+      "name": "medium shallot, minced (about 3 tbsp)",
+      "short": "minced shallot"
+     },
+     {
+      "key": "broth1",
+      "qty": 240,
+      "unit": "ml",
+      "name": "low-sodium chicken broth",
+      "short": "chicken broth",
+      "us": {
+       "qty": 1,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "mustard1",
+      "qty": 2,
+      "unit": "tsp",
+      "name": "Dijon mustard",
+      "short": "Dijon mustard"
+     },
+     {
+      "key": "butter1",
+      "qty": 28,
+      "unit": "g",
+      "name": "unsalted butter",
+      "short": "unsalted butter",
+      "us": {
+       "qty": 2,
+       "unit": "tbsp"
+      }
+     },
+     {
+      "key": "tarragon",
+      "qty": 2,
+      "unit": "tsp",
+      "name": "chopped fresh tarragon leaves",
+      "short": "chopped tarragon"
+     },
+     {
+      "key": "lemon",
+      "qty": 10,
+      "unit": "ml",
+      "name": "fresh lemon juice",
+      "short": "lemon juice",
+      "us": {
+       "qty": 2,
+       "unit": "tsp"
+      },
+      "note": "from 1 lemon"
+     },
+     {
+      "name": "Ground black pepper"
+     }
+    ]
+   },
+   {
+    "name": "Thyme-sherry vinegar pan sauce (optional)",
+    "items": [
+     {
+      "key": "shallot2",
+      "qty": 1,
+      "name": "medium shallot, minced (about 3 tbsp)",
+      "short": "minced shallot"
+     },
+     {
+      "key": "garlic",
+      "qty": 2,
+      "name": "medium garlic cloves, minced or pressed (about 2 tsp)",
+      "short": "garlic cloves"
+     },
+     {
+      "key": "thyme",
+      "qty": 2,
+      "unit": "tsp",
+      "name": "chopped fresh thyme leaves",
+      "short": "chopped thyme"
+     },
+     {
+      "key": "broth2",
+      "qty": 240,
+      "unit": "ml",
+      "name": "low-sodium chicken broth",
+      "short": "chicken broth",
+      "us": {
+       "qty": 1,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "mustard2",
+      "qty": 2,
+      "unit": "tsp",
+      "name": "Dijon mustard",
+      "short": "Dijon mustard"
+     },
+     {
+      "key": "butter2",
+      "qty": 28,
+      "unit": "g",
+      "name": "unsalted butter",
+      "short": "unsalted butter",
+      "us": {
+       "qty": 2,
+       "unit": "tbsp"
+      }
+     },
+     {
+      "key": "vinegar",
+      "qty": 10,
+      "unit": "ml",
+      "name": "sherry vinegar",
+      "short": "sherry vinegar",
+      "us": {
+       "qty": 2,
+       "unit": "tsp"
+      }
+     },
+     {
+      "name": "Ground black pepper"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "title": "Heat the oven and skillet",
+    "text": "Set an oven rack in the middle position and place a 12-inch ovensafe skillet on it. Heat the oven to 230°C / 210°C fan / gas 8 / 450°F."
+   },
+   {
+    "title": "Season the chicken",
+    "text": "Mix {salt} and {pepper} in a small bowl. Pat {chicken} dry with paper towels and rub it all over with {oil}. Sprinkle the salt mixture evenly over the whole bird and rub it in with your hands. Tie the legs together with twine and tuck the wingtips behind the back."
+   },
+   {
+    "title": "Roast",
+    "text": "Set the chicken breast side up in the hot skillet in the oven. Roast until the thickest part of the breast reads 49°C / 120°F and the thickest part of the thigh reads 57°C / 135°F, 25 to 35 minutes.",
+    "timer": 30
+   },
+   {
+    "title": "Finish in the turned-off oven",
+    "text": "Turn off the oven and leave the chicken inside until the breast reads 71°C / 160°F and the thigh reads 79°C / 175°F, 25 to 35 minutes.",
+    "timer": 30
+   },
+   {
+    "title": "Rest and carve",
+    "text": "Move the chicken to a carving board and let it rest, uncovered, for 20 minutes. Don't wash the skillet if you're making a pan sauce; make it while the chicken rests. Carve and serve with the sauce.",
+    "timer": 20
+   },
+   {
+    "title": "Tarragon-lemon pan sauce",
+    "text": "Spoon off all but 1 tbsp of fat from the skillet, leaving the browned bits and juices behind. Set the skillet over medium-high heat, add {shallot1} and cook until soft, about 2 minutes. Stir in {broth1} and {mustard1}, scraping up the browned bits with a wooden spoon. Simmer until reduced to about ¾ cup (180 ml), about 3 minutes. Off the heat, whisk in {butter1}, {tarragon} and {lemon}. Season with pepper, then cover to keep warm.",
+    "timer": 5
+   },
+   {
+    "title": "Or: thyme-sherry vinegar pan sauce",
+    "text": "Spoon off all but 1 tbsp of fat from the skillet, leaving the browned bits and juices behind. Set the skillet over medium-high heat, add {shallot2}, {garlic} and {thyme} and cook until soft, about 2 minutes. Stir in {broth2} and {mustard2}, scraping up the browned bits with a wooden spoon. Simmer until reduced to about ¾ cup (180 ml), about 3 minutes. Off the heat, whisk in {butter2} and {vinegar}. Season with pepper, then cover to keep warm.",
+    "timer": 5
+   }
+  ],
+  "tips": [
+   "A 1.6–1.8 kg (3½–4 lb) bird is ideal. For a larger chicken, roast 35 to 40 minutes before turning off the oven.",
+   "The skillet handle will be very hot when you make the sauce. Keep an oven mitt or towel on it.",
+   "Each pan sauce makes about ¾ cup (180 ml), enough for one chicken."
+  ],
+  "source": "America's Test Kitchen",
+  "image": "img/weeknight-roast-chicken.jpg",
+  "added": "2026-10-25"
  }
 ]
