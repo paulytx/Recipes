@@ -172,7 +172,7 @@ const store = {
   set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)) } catch {} }
 };
 let units = store.get("units", "us");
-let servingsBy = {};
+let servingsBy = store.get("servings", {});
 let filter = "All", query = "";
 const timers = {}; // id -> {label, end, done, total}
 
@@ -535,7 +535,7 @@ document.addEventListener("click", e => {
   if (t.dataset.open) location.hash = t.dataset.open;
   else if (t.hasAttribute("data-home")) location.hash = "";
   else if (t.dataset.cat) { filter = t.dataset.cat; renderIndex() }
-  else if (t.dataset.sv) { const sv = (servingsBy[r.id] ?? r.servings) + +t.dataset.sv; if (sv >= 1) { servingsBy[r.id] = sv; renderRecipe(r); tick() } }
+  else if (t.dataset.sv) { const sv = (servingsBy[r.id] ?? r.servings) + +t.dataset.sv; if (sv >= 1) { servingsBy[r.id] = sv; store.set("servings", servingsBy); renderRecipe(r); tick() } }
   else if (t.dataset.units) { units = t.dataset.units; store.set("units", units); renderRecipe(r); tick() }
   else if (t.dataset.timer) toggleTimer(r, +t.dataset.timer);
   else if (t.dataset.clear) { delete timers[t.dataset.clear]; tick() }
