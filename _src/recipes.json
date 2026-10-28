@@ -9772,5 +9772,130 @@
   "source": "America's Test Kitchen",
   "image": "img/weeknight-roast-chicken.jpg",
   "added": "2026-10-25"
+ },
+ {
+  "id": "heb-rotisserie-chicken-salad",
+  "title": "H-E-B Rotisserie Chicken Salad",
+  "category": "Mains",
+  "description": "A smooth, spreadable copycat of the H-E-B deli rotisserie chicken salad, made from leftover roast chicken.",
+  "servings": 4,
+  "servingWord": "servings",
+  "yieldNote": "Makes about 3 cups (4 servings)",
+  "activeTime": 10,
+  "totalTime": 70,
+  "equipment": [
+   "Food processor",
+   "Spatula",
+   "Lidded container"
+  ],
+  "groups": [
+   {
+    "name": "Chicken salad",
+    "items": [
+     {
+      "key": "chicken",
+      "qty": 450,
+      "unit": "g",
+      "name": "leftover roast chicken, skin and bones removed",
+      "short": "roast chicken",
+      "us": {
+       "qty": 1,
+       "unit": "lb"
+      },
+      "note": "about 3 cups"
+     },
+     {
+      "key": "mayo",
+      "qty": 180,
+      "unit": "ml",
+      "name": "mayonnaise",
+      "short": "mayonnaise",
+      "us": {
+       "qty": 0.75,
+       "unit": "cup"
+      },
+      "note": "plus a spoonful more if needed"
+     },
+     {
+      "key": "celery",
+      "qty": 60,
+      "unit": "ml",
+      "name": "celery, cut in chunks",
+      "short": "celery",
+      "us": {
+       "qty": 0.25,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "onion",
+      "qty": 2,
+      "unit": "tbsp",
+      "name": "onion, roughly chopped",
+      "short": "onion"
+     },
+     {
+      "key": "paprika",
+      "qty": 0.5,
+      "unit": "tsp",
+      "name": "smoked paprika",
+      "short": "smoked paprika"
+     },
+     {
+      "name": "Salt and black pepper, to taste"
+     }
+    ]
+   },
+   {
+    "name": "Optional extras",
+    "items": [
+     {
+      "name": "Splash of apple cider vinegar"
+     },
+     {
+      "name": "Dash of Tabasco"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "title": "Chop the vegetables",
+    "text": "Pulse {celery} and {onion} in the food processor until very fine."
+   },
+   {
+    "title": "Process the chicken",
+    "text": "Add {chicken} and pulse until finely shredded, almost a paste. Scrape down the sides as you go."
+   },
+   {
+    "title": "Mix it smooth",
+    "text": "Add {mayo}, {paprika}, salt and pepper. Pulse just until creamy and spreadable. Add a little vinegar or Tabasco if you like."
+   },
+   {
+    "title": "Chill",
+    "text": "Cover and refrigerate for at least an hour so the flavors come together.",
+    "timer": 60
+   }
+  ],
+  "variations": [
+   "Serve on croissants, in wraps or with crackers.",
+   "Add a dash of Tabasco and a splash of cider vinegar to get closer to the store version."
+  ],
+  "tips": [
+   "If it's too thick, pulse in another spoonful of mayo.",
+   "Use mostly white meat for the closest match to the deli version."
+  ],
+  "makeAhead": [
+   {
+    "title": "Store in the fridge",
+    "text": "Keep covered in the refrigerator for up to 3–4 days."
+   },
+   {
+    "title": "Freeze the chicken, not the salad",
+    "text": "Mayonnaise separates and turns watery when frozen, so don't freeze the finished spread. Instead, process the chicken (step 2) and freeze it plain in a flat zip-top bag for up to 3 months. Thaw overnight in the fridge, then finish with the vegetables, mayo and seasoning."
+   }
+  ],
+  "source": "Copycat of H-E-B Meal Simple Rotisserie Chicken Salad",
+  "added": "2026-10-28"
  }
 ]
