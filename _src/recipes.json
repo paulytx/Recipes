@@ -9447,5 +9447,218 @@
   ],
   "source": "Copycat of H-E-B Meal Simple Rotisserie Chicken Salad",
   "added": "2026-10-28"
+ },
+ {
+  "id": "meatball-subs",
+  "title": "Meatball Subs",
+  "category": "Mains",
+  "description": "Parmesan beef meatballs broiled right in a quick garlicky tomato sauce, then tucked into sub rolls lined with provolone and broiled again until melty.",
+  "servings": 4,
+  "servingWord": "subs",
+  "yieldNote": "Makes 4 subs",
+  "activeTime": 30,
+  "totalTime": 60,
+  "equipment": [
+   "12-inch broiler-safe skillet",
+   "Medium bowl",
+   "Fork",
+   "Tongs",
+   "Paring knife",
+   "Rimmed baking sheet"
+  ],
+  "groups": [
+   {
+    "name": "Sauce",
+    "items": [
+     {
+      "key": "oil",
+      "qty": 15,
+      "unit": "ml",
+      "name": "extra-virgin olive oil",
+      "short": "olive oil",
+      "us": {
+       "qty": 1,
+       "unit": "tbsp"
+      }
+     },
+     {
+      "key": "garlic1",
+      "qty": 2,
+      "name": "garlic cloves, minced",
+      "short": "minced garlic cloves"
+     },
+     {
+      "key": "tomatoes",
+      "qty": 794,
+      "unit": "g",
+      "name": "crushed tomatoes",
+      "short": "crushed tomatoes",
+      "note": "one 28-oz can"
+     },
+     {
+      "key": "salt1",
+      "qty": 0.5,
+      "unit": "tsp",
+      "name": "table salt",
+      "short": "salt"
+     },
+     {
+      "key": "chili",
+      "qty": 0.5,
+      "unit": "tsp",
+      "name": "red pepper flakes",
+      "short": "red pepper flakes"
+     },
+     {
+      "key": "sugar",
+      "qty": 0.25,
+      "unit": "tsp",
+      "name": "sugar",
+      "short": "sugar"
+     }
+    ]
+   },
+   {
+    "name": "Meatballs",
+    "items": [
+     {
+      "key": "panko",
+      "qty": 15,
+      "unit": "g",
+      "name": "panko bread crumbs",
+      "short": "panko",
+      "us": {
+       "qty": 0.25,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "milk",
+      "qty": 45,
+      "unit": "ml",
+      "name": "milk",
+      "short": "milk",
+      "us": {
+       "qty": 3,
+       "unit": "tbsp"
+      }
+     },
+     {
+      "key": "beef",
+      "qty": 454,
+      "unit": "g",
+      "name": "85% lean ground beef",
+      "short": "ground beef",
+      "note": "any fat percentage or meatloaf mix also works"
+     },
+     {
+      "key": "parmesan",
+      "qty": 43,
+      "unit": "g",
+      "name": "Parmesan, grated (¾ cup)",
+      "short": "grated Parmesan"
+     },
+     {
+      "key": "egg",
+      "qty": 1,
+      "name": "large egg, lightly beaten",
+      "short": "beaten egg"
+     },
+     {
+      "key": "oregano",
+      "qty": 0.75,
+      "unit": "tsp",
+      "name": "dried oregano",
+      "short": "dried oregano"
+     },
+     {
+      "key": "pepper",
+      "qty": 0.25,
+      "unit": "tsp",
+      "name": "ground black pepper",
+      "short": "black pepper"
+     },
+     {
+      "key": "garlic2",
+      "qty": 2,
+      "name": "garlic cloves, minced",
+      "short": "minced garlic cloves"
+     },
+     {
+      "key": "salt2",
+      "qty": 0.75,
+      "unit": "tsp",
+      "name": "table salt",
+      "short": "salt"
+     }
+    ]
+   },
+   {
+    "name": "Subs",
+    "items": [
+     {
+      "key": "rolls",
+      "qty": 4,
+      "name": "Italian sub rolls (20 cm / 8 inch), unsplit",
+      "short": "sub rolls"
+     },
+     {
+      "key": "provolone",
+      "qty": 8,
+      "name": "thin provolone slices (about 225 g / 8 oz), torn in half",
+      "short": "provolone slices"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "title": "Soak the panko",
+    "text": "Stir {panko} and {milk} together in a medium bowl. Let sit about 10 minutes, mashing now and then with a fork, until it turns into a smooth paste.",
+    "timer": 10
+   },
+   {
+    "title": "Make the sauce",
+    "text": "Meanwhile, warm {oil} and {garlic1} in a 12-inch broiler-safe skillet over medium heat, stirring often, until the garlic smells fragrant but hasn't browned, about 1 minute. Stir in {tomatoes}, {salt1}, {chili} and {sugar} and bring to a simmer. Turn the heat to medium-low and simmer for 10 minutes, stirring now and then. Take off the heat.",
+    "timer": 10
+   },
+   {
+    "title": "Heat the broiler",
+    "text": "While the sauce simmers, set an oven rack 20 cm / 8 inches below the broiler and heat the broiler."
+   },
+   {
+    "title": "Mix and shape the meatballs",
+    "text": "Add {beef}, {parmesan}, {egg}, {oregano}, {pepper}, {garlic2} and {salt2} to the panko paste. Mix gently with your hands until evenly combined. Divide into 16 portions (about 3 tbsp each) and roll into balls; damp hands make this easier. Nestle the meatballs into the sauce, spaced evenly."
+   },
+   {
+    "title": "Broil the first side",
+    "text": "Slide the skillet under the broiler and cook until the meatball tops start to brown and form a light crust, about 7 minutes.",
+    "timer": 7
+   },
+   {
+    "title": "Flip and broil again",
+    "text": "Pull the skillet out and gently turn the meatballs with tongs. Broil until the second sides are browned, about 7 minutes more. Let cool slightly. No need to check the temperature: once browned, they're cooked through.",
+    "timer": 7
+   },
+   {
+    "title": "Cut the rolls",
+    "text": "One at a time, slice each of the {rolls} lengthwise with a paring knife, cutting only three-quarters of the way down and leaving ½ inch (1 cm) uncut at both ends to form a pocket. Set them split side up on a rimmed baking sheet."
+   },
+   {
+    "title": "Fill the subs",
+    "text": "Line the bottom of each roll with 2 halves of {provolone} (1 slice), then add 4 meatballs, taking care not to split the ends of the bread. Spoon the sauce from the skillet evenly over the meatballs, about ⅔ cup (160 ml) per sub. Top each with 2 more cheese halves."
+   },
+   {
+    "title": "Broil and serve",
+    "text": "Broil until the cheese melts and the tops of the rolls are lightly toasted, about 1 minute. Serve right away.",
+    "timer": 1
+   }
+  ],
+  "tips": [
+   "Why it works: broiling the meatballs in the sauce thickens it so it won't soak the bread, while the sauce keeps the meat moist. Cutting your own pocket in unsplit rolls and putting cheese under the meatballs as well as on top keeps the sandwich sturdy and the bread from going soggy.",
+   "Watch the final broil closely — rolls go from toasted to burnt fast."
+  ],
+  "source": "America's Test Kitchen TV, Season 19 \"Takeout at Home\" (David Yu; Cook's Illustrated, Sept/Oct 2025)",
+  "added": "2026-10-31"
  }
 ]
