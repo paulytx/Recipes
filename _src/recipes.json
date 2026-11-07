@@ -9768,5 +9768,163 @@
   "source": "America's Test Kitchen, The Complete Slow Cooker",
   "image": "img/all-purpose-chicken-broth.jpg",
   "added": "2026-11-07"
+ },
+ {
+  "id": "slow-cooker-rosemary-garlic-sirloin",
+  "title": "Slow-Cooker Rosemary-Garlic Sirloin",
+  "category": "Mains",
+  "description": "Sirloin seared, then braised low and slow with garlic, shallots and rosemary until fork-tender, finished with a buttery pan sauce. Includes a pressure-cooker version.",
+  "servings": 4,
+  "servingWord": "servings",
+  "yieldNote": "Serves 4 (about 5 oz each)",
+  "activeTime": 25,
+  "totalTime": 460,
+  "equipment": [
+   "4- to 6-quart slow cooker (or electric pressure cooker)",
+   "Large cast-iron skillet",
+   "Paper towels",
+   "Cutting board with juice channel",
+   "Small saucepan"
+  ],
+  "groups": [
+   {
+    "name": "Steak",
+    "items": [
+     {
+      "key": "steak",
+      "qty": 567,
+      "unit": "g",
+      "name": "sirloin steak, hard fat trimmed",
+      "short": "steak",
+      "us": {
+       "qty": 1.25,
+       "unit": "lb"
+      }
+     },
+     {
+      "key": "salt",
+      "qty": 0.75,
+      "unit": "tsp",
+      "name": "kosher salt",
+      "short": "kosher salt"
+     },
+     {
+      "key": "pepper",
+      "qty": 0.5,
+      "unit": "tsp",
+      "name": "black pepper",
+      "short": "black pepper"
+     },
+     {
+      "key": "oil",
+      "qty": 15,
+      "unit": "ml",
+      "name": "olive oil",
+      "short": "olive oil",
+      "us": {
+       "qty": 1,
+       "unit": "tbsp"
+      }
+     },
+     {
+      "key": "garlic",
+      "qty": 4,
+      "name": "garlic cloves, minced",
+      "short": "minced garlic cloves"
+     },
+     {
+      "key": "shallots",
+      "qty": 2,
+      "name": "medium shallots, sliced lengthwise",
+      "short": "sliced shallots"
+     },
+     {
+      "key": "rosemary",
+      "qty": 1,
+      "name": "fresh rosemary sprig, plus more for garnish",
+      "short": "rosemary sprig"
+     },
+     {
+      "key": "broth",
+      "qty": 120,
+      "unit": "ml",
+      "name": "beef broth",
+      "short": "beef broth",
+      "us": {
+       "qty": 0.5,
+       "unit": "cup"
+      },
+      "note": "use 240 ml / 1 cup for a pressure cooker"
+     },
+     {
+      "key": "butter",
+      "qty": 21,
+      "unit": "g",
+      "name": "unsalted butter",
+      "short": "butter",
+      "us": {
+       "qty": 1.5,
+       "unit": "tbsp"
+      }
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "title": "Season the steak",
+    "text": "Pat {steak} dry with paper towels. Season all over with half of the {salt} and half of the {pepper}."
+   },
+   {
+    "title": "Sear",
+    "text": "Heat a large cast-iron skillet over medium-high until it starts to smoke, then add {oil}. Brown the steak well, about 2 minutes per side. Move it to the slow cooker.",
+    "timer": 4
+   },
+   {
+    "title": "Build the braise",
+    "text": "Lower the heat to medium and stir {shallots} and {garlic} into the skillet drippings for 1 minute. Pour in {broth}, scraping up the browned bits, then pour everything over the steak. Tuck {rosemary} alongside."
+   },
+   {
+    "title": "Slow-cook",
+    "text": "Cover and cook on low until the steak is fork-tender, 6 to 7 hours. Avoid the high setting — lean sirloin turns tough when rushed.",
+    "timer": 390
+   },
+   {
+    "title": "Rest the steak",
+    "text": "Lift the steak onto a cutting board with a juice channel. Spoon the shallots and garlic over the top, cover loosely with foil and let rest 10 minutes.",
+    "timer": 10
+   },
+   {
+    "title": "Make the sauce",
+    "text": "Discard the rosemary. Pour the cooking liquid into a small saucepan and simmer until reduced by about half, 5 minutes. Off the heat, swirl in {butter}.",
+    "timer": 5
+   },
+   {
+    "title": "Slice and serve",
+    "text": "Slice the steak thinly against the grain and arrange on a platter. Sprinkle with the remaining salt and pepper, spoon the sauce and any board juices over the slices, and garnish with rosemary sprigs."
+   }
+  ],
+  "variations": [
+   "Pressure cooker: Sear the steak in oil on the Sauté setting, then cook the shallots and garlic and deglaze with 240 ml / 1 cup broth. Cut the steak into 4 pieces, return them with the rosemary, lock the lid and cook on high pressure for 30 minutes. Let the pressure release naturally for 10 minutes, then quick-release. Rest the steak, then reduce the liquid on Sauté for about 5 minutes and swirl in the butter.",
+   "Original skillet version (medium-rare, about 10 minutes): let the steak sit at room temperature 30 minutes, sear 1 minute, add garlic, shallots, butter and rosemary, and baste for 1 minute; flip and keep basting until it reaches 49°C / 120°F, about 2 minutes more. Rest 10 minutes, then slice and season.",
+   "Top each serving with 1 tablespoon crumbled goat cheese for about 2 g more protein."
+  ],
+  "tips": [
+   "Slow and pressure cooking won't give a pink, medium-rare steak — the meat ends up fully cooked but tender and sliceable. For a juicy pink steak, use the skillet version.",
+   "If the steak falls apart when you slice it, shred it instead and toss it in the sauce; it's great on rolls."
+  ],
+  "makeAhead": [
+   {
+    "title": "Refrigerate",
+    "text": "Keep sliced steak in its sauce, covered, for up to 3 days. Reheat gently over low heat."
+   },
+   {
+    "title": "Freeze",
+    "text": "Freeze in the sauce for up to 2 months; thaw overnight in the fridge."
+   }
+  ],
+  "nutrition": "Per serving (about 5 oz), original skillet recipe: 248 kcal, 28 g protein, 3 g carbs, 0 g fiber, 0 g sugar, 13 g fat (5 g saturated), 420 mg sodium",
+  "source": "Magazine clipping, adapted for slow cooker and pressure cooker",
+  "added": "2026-11-07"
  }
 ]
