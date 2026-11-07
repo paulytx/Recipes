@@ -9661,5 +9661,112 @@
   "source": "Cook's Country TV, Season 19 \"Takeout at Home\" (David Yu, America's Test Kitchen)",
   "image": "img/meatball-subs.jpg",
   "added": "2026-10-31"
+ },
+ {
+  "id": "all-purpose-chicken-broth",
+  "title": "All-Purpose Chicken Broth",
+  "category": "Soups",
+  "description": "A clear, rich slow-cooker broth made from roasted chicken wings, onion and garlic — an easy way to stock the freezer.",
+  "servings": 3,
+  "servingWord": "quarts",
+  "yieldNote": "Makes 3 quarts (about 2.8 L)",
+  "activeTime": 20,
+  "totalTime": 540,
+  "equipment": [
+   "4- to 7-quart slow cooker",
+   "Rimmed baking sheet",
+   "Aluminum foil",
+   "Fine-mesh strainer",
+   "Large container",
+   "Large spoon"
+  ],
+  "groups": [
+   {
+    "name": "Broth",
+    "items": [
+     {
+      "key": "wings",
+      "qty": 1360,
+      "unit": "g",
+      "name": "chicken wings",
+      "short": "chicken wings",
+      "us": {
+       "qty": 3,
+       "unit": "lb"
+      }
+     },
+     {
+      "key": "onion",
+      "qty": 1,
+      "name": "onion, chopped",
+      "short": "chopped onion"
+     },
+     {
+      "key": "water",
+      "qty": 2840,
+      "unit": "ml",
+      "name": "water",
+      "short": "water",
+      "us": {
+       "qty": 3,
+       "unit": "qt"
+      }
+     },
+     {
+      "key": "garlic",
+      "qty": 3,
+      "name": "garlic cloves, peeled and smashed",
+      "short": "smashed garlic cloves"
+     },
+     {
+      "key": "salt",
+      "qty": 0.5,
+      "unit": "tsp",
+      "name": "table salt",
+      "short": "salt"
+     },
+     {
+      "name": "Vegetable oil spray"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "title": "Heat the oven",
+    "text": "Set an oven rack in the lower-middle position and heat the oven to 230°C / 210°C fan / gas 8 / 450°F. Line a rimmed baking sheet with foil and give it a light coat of vegetable oil spray."
+   },
+   {
+    "title": "Roast the wings",
+    "text": "Spread {wings} and {onion} evenly on the baking sheet. Roast until golden, about 40 minutes, then move everything to the slow cooker.",
+    "timer": 40
+   },
+   {
+    "title": "Slow-cook the broth",
+    "text": "Stir {water}, {garlic} and {salt} into the slow cooker. Cover and cook until the broth tastes deep and rich, 6 to 8 hours on low or 4 to 6 hours on high.",
+    "timer": 420
+   },
+   {
+    "title": "Strain and skim",
+    "text": "Pour the broth through a fine-mesh strainer into a large container, pressing on the solids to get out as much liquid as you can. Skim the fat off the surface with a large spoon."
+   }
+  ],
+  "tips": [
+   "Why it works: wings give a clearer, cleaner-tasting broth than a whole cut-up chicken or backs and necks, and the long simmer pulls every bit of flavor from the bones. Roasting them first adds color and a deeper, caramelized taste.",
+   "The fat is easiest to remove once the broth is chilled — it sets on top and lifts right off."
+  ],
+  "makeAhead": [
+   {
+    "title": "Refrigerate",
+    "text": "Keeps in the fridge for up to 4 days."
+   },
+   {
+    "title": "Freeze",
+    "text": "Freeze for up to 2 months. Portion it into jars or containers first so you can thaw just what you need."
+   }
+  ],
+  "source": "America's Test Kitchen, The Complete Slow Cooker",
+  "image": "img/all-purpose-chicken-broth.jpg",
+  "added": "2026-11-07"
  }
 ]
