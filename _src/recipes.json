@@ -9926,5 +9926,278 @@
   "nutrition": "Per serving (about 5 oz), original skillet recipe: 248 kcal, 28 g protein, 3 g carbs, 0 g fiber, 0 g sugar, 13 g fat (5 g saturated), 420 mg sodium",
   "source": "Magazine clipping, adapted for slow cooker and pressure cooker",
   "added": "2026-11-07"
+ },
+ {
+  "id": "philips-pasta-recipes",
+  "title": "Philips Pasta Recipes",
+  "category": "Mains",
+  "description": "Flour-and-liquid ratios for fresh pasta in the Philips pasta maker: spelt, durum, wheat and squid-ink nero.",
+  "servings": 2,
+  "servingWord": "servings",
+  "yieldNote": "Each variety makes about 200 g fresh pasta (2 servings)",
+  "activeTime": 5,
+  "totalTime": 20,
+  "equipment": [
+   "Philips pasta maker",
+   "Shaping disc of your choice",
+   "Kitchen scale",
+   "Measuring jug"
+  ],
+  "groups": [
+   {
+    "name": "Spelt pasta (with egg)",
+    "items": [
+     {
+      "key": "spelt",
+      "qty": 200,
+      "unit": "g",
+      "name": "spelt flour",
+      "short": "spelt flour",
+      "us": {
+       "qty": 1.67,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "egg1",
+      "qty": 1,
+      "name": "large egg",
+      "short": "egg"
+     },
+     {
+      "key": "water1",
+      "qty": 90,
+      "unit": "g",
+      "name": "water (to top up)",
+      "short": "water",
+      "note": "Weigh the egg in a jug, then add water to reach 90 g total"
+     }
+    ]
+   },
+   {
+    "name": "Durum pasta with egg",
+    "items": [
+     {
+      "key": "semolina2",
+      "qty": 150,
+      "unit": "g",
+      "name": "durum semolina",
+      "short": "semolina",
+      "us": {
+       "qty": 0.875,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "ap2",
+      "qty": 50,
+      "unit": "g",
+      "name": "all-purpose flour",
+      "short": "all-purpose flour",
+      "us": {
+       "qty": 0.4,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "egg2",
+      "qty": 1,
+      "name": "large egg",
+      "short": "egg"
+     },
+     {
+      "key": "water2",
+      "qty": 75,
+      "unit": "g",
+      "name": "water (to top up)",
+      "short": "water",
+      "note": "Weigh the egg in a jug, then add water to reach 75 g total"
+     }
+    ]
+   },
+   {
+    "name": "Durum pasta without egg",
+    "items": [
+     {
+      "key": "semolina3",
+      "qty": 150,
+      "unit": "g",
+      "name": "durum semolina",
+      "short": "semolina",
+      "us": {
+       "qty": 0.875,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "ap3",
+      "qty": 50,
+      "unit": "g",
+      "name": "all-purpose flour",
+      "short": "all-purpose flour",
+      "us": {
+       "qty": 0.4,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "water3",
+      "qty": 65,
+      "unit": "g",
+      "name": "water",
+      "short": "water",
+      "note": "Weigh it — the ratio matters more than usual"
+     }
+    ]
+   },
+   {
+    "name": "Wheat pasta with egg",
+    "items": [
+     {
+      "key": "ap4",
+      "qty": 200,
+      "unit": "g",
+      "name": "all-purpose flour",
+      "short": "all-purpose flour",
+      "us": {
+       "qty": 1.6,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "egg4",
+      "qty": 1,
+      "name": "large egg",
+      "short": "egg"
+     },
+     {
+      "key": "water4",
+      "qty": 80,
+      "unit": "g",
+      "name": "water (to top up)",
+      "short": "water",
+      "note": "Weigh the egg in a jug, then add water to reach 80 g total"
+     }
+    ]
+   },
+   {
+    "name": "Wheat pasta without egg",
+    "items": [
+     {
+      "key": "ap5",
+      "qty": 200,
+      "unit": "g",
+      "name": "all-purpose flour",
+      "short": "all-purpose flour",
+      "us": {
+       "qty": 1.6,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "water5",
+      "qty": 70,
+      "unit": "g",
+      "name": "water",
+      "short": "water",
+      "note": "Weigh it — the ratio matters more than usual"
+     }
+    ]
+   },
+   {
+    "name": "Pasta nero (squid ink)",
+    "items": [
+     {
+      "key": "semolina6",
+      "qty": 150,
+      "unit": "g",
+      "name": "durum semolina",
+      "short": "semolina",
+      "us": {
+       "qty": 0.875,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "ap6",
+      "qty": 50,
+      "unit": "g",
+      "name": "all-purpose flour",
+      "short": "all-purpose flour",
+      "us": {
+       "qty": 0.4,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "egg6",
+      "qty": 1,
+      "name": "large egg",
+      "short": "egg"
+     },
+     {
+      "key": "ink",
+      "qty": 1,
+      "unit": "tsp",
+      "name": "squid ink",
+      "short": "squid ink"
+     },
+     {
+      "key": "water6",
+      "qty": 75,
+      "unit": "g",
+      "name": "water (to top up)",
+      "short": "water",
+      "note": "Weigh the egg and ink in a jug, then add water to reach 75 g total"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "title": "Pick a variety",
+    "text": "Choose one of the varieties above. Each one uses about 200 g of flour, so make just one at a time."
+   },
+   {
+    "title": "Weigh the liquid",
+    "text": "For the egg versions, crack the egg into a jug on the scale (stir in the squid ink for nero), then top up with water to the total weight shown. For eggless versions, just weigh the water. Beat or stir well."
+   },
+   {
+    "title": "Load the flour",
+    "text": "Fit the shaping disc. Put the flour (and semolina, if using) into the mixing chamber and close the lid."
+   },
+   {
+    "title": "Mix and extrude",
+    "text": "Start the machine, then pour the liquid slowly and evenly through the slot in the lid. Let it mix, then extrude, cutting the pasta to length as it comes out.",
+    "timer": 15
+   },
+   {
+    "title": "Cook",
+    "text": "Cook in plenty of well-salted boiling water for 2–4 minutes, depending on thickness, until tender with a little bite."
+   }
+  ],
+  "variations": [
+   "Ramen (same chart): 200 g bread flour with 2 g salt, plus 65 g water.",
+   "Whole wheat with egg: 200 g whole wheat flour, plus 1 egg and water to make 90 g.",
+   "Whole wheat without egg: 200 g whole wheat flour, plus 80 g water."
+  ],
+  "tips": [
+   "Liquid amounts are total weights — egg plus water — so a scale gives the best results.",
+   "If the dough looks crumbly, add a few drops more water next time; if it sticks, use slightly less.",
+   "Toss fresh pasta in a little flour or semolina so the strands don't stick together."
+  ],
+  "makeAhead": [
+   {
+    "title": "Fridge",
+    "text": "Dust with flour, curl into nests and keep covered in the fridge for up to 2 days."
+   },
+   {
+    "title": "Freezer",
+    "text": "Freeze nests on a tray, then bag. Cook from frozen, adding about a minute."
+   }
+  ],
+  "source": "Philips Pasta Maker recipe booklet",
+  "image": "img/philips-pasta-recipes.jpg",
+  "added": "2026-11-08"
  }
 ]
