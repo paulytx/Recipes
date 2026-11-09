@@ -10105,6 +10105,41 @@
     ]
    },
    {
+    "name": "Ramen",
+    "items": [
+     {
+      "key": "bread7",
+      "qty": 200,
+      "unit": "g",
+      "name": "bread flour",
+      "short": "bread flour",
+      "us": {
+       "qty": 1.6,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "salt7",
+      "qty": 2,
+      "unit": "g",
+      "name": "salt, mixed into the flour",
+      "short": "salt",
+      "us": {
+       "qty": 0.33,
+       "unit": "tsp"
+      }
+     },
+     {
+      "key": "water7",
+      "qty": 65,
+      "unit": "g",
+      "name": "water",
+      "short": "water",
+      "note": "Weigh it — the ratio matters more than usual"
+     }
+    ]
+   },
+   {
     "name": "Pasta nero (squid ink)",
     "items": [
      {
@@ -10177,7 +10212,6 @@
    }
   ],
   "variations": [
-   "Ramen (same chart): 200 g bread flour with 2 g salt, plus 65 g water.",
    "Whole wheat with egg: 200 g whole wheat flour, plus 1 egg and water to make 90 g.",
    "Whole wheat without egg: 200 g whole wheat flour, plus 80 g water."
   ],
