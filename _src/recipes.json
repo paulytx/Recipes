@@ -4386,14 +4386,9 @@
     "items": [
      {
       "key": "tomatillos",
-      "qty": 454,
-      "unit": "g",
-      "name": "tomatillos, husks removed",
-      "short": "tomatillos",
-      "us": {
-       "qty": 1,
-       "unit": "lb"
-      }
+      "qty": 1,
+      "name": "can (28 oz / 794 g) whole tomatillos, drained and rinsed",
+      "short": "can of tomatillos"
      },
      {
       "key": "poblanos",
@@ -4514,11 +4509,11 @@
   "steps": [
    {
     "title": "Prep for broiling",
-    "text": "Turn the broiler to high with a rack about 6 inches (15 cm) below it. On a large rimmed sheet pan, toss {tomatillos}, {poblanos}, {jalapeno} and {garlic} with {oil1} and a good pinch of salt."
+    "text": "Turn the broiler to high with a rack about 6 inches (15 cm) below it. Drain the {tomatillos}, rinse them and pat dry. On a large rimmed sheet pan, toss the tomatillos, {poblanos}, {jalapeno} and {garlic} with {oil1}. Go light on the salt, because canned tomatillos are already salted."
    },
    {
     "title": "Char the vegetables",
-    "text": "Broil until well charred in spots, about 15 minutes. Flip everything halfway through.",
+    "text": "Broil until well charred in spots, about 15 minutes. Flip everything halfway through. The canned tomatillos are soft and will collapse, which is fine.",
     "timer": 15
    },
    {
@@ -4557,7 +4552,7 @@
   "tips": [
    "The broth is cut to 1 cup because a slow cooker doesn't let liquid boil off the way the oven does.",
    "In a rush? You can skip browning the pork, but the stew will have less depth.",
-   "Pick tomatillos that are plump, firm and unblemished. Soft ones are overripe.",
+   "Using fresh tomatillos? Use 1 lb (450 g), husked and rinsed, in place of the can.",
    "No poblanos? Anaheim or Cubanelle peppers work instead.",
    "Sweet onion is used on purpose: its extra sugar balances the tart tomatillos."
   ],
