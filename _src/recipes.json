@@ -4365,19 +4365,20 @@
  },
  {
   "id": "pork-chile-verde",
-  "title": "Pork Chile Verde",
+  "title": "Pork Chile Verde (Slow Cooker)",
   "category": "Mains",
-  "description": "Pork shoulder braised until tender in a smoky green sauce of charred tomatillos, poblanos, jalapeño, garlic and cilantro.",
+  "description": "Pork shoulder slow-cooked until tender in a smoky green sauce of charred tomatillos, poblanos, jalapeño, garlic and cilantro.",
   "servings": 4,
   "servingWord": "servings",
   "yieldNote": "Serves 4",
-  "activeTime": 15,
-  "totalTime": 150,
+  "activeTime": 30,
+  "totalTime": 450,
   "equipment": [
    "Large rimmed sheet pan",
    "Small bowl and plastic wrap (or a resealable bag)",
    "Blender",
-   "Large Dutch oven"
+   "Large skillet",
+   "5–6 qt slow cooker"
   ],
   "groups": [
    {
@@ -4484,12 +4485,12 @@
      },
      {
       "key": "broth",
-      "qty": 475,
+      "qty": 240,
       "unit": "ml",
       "name": "low-sodium chicken broth",
       "short": "chicken broth",
       "us": {
-       "qty": 2,
+       "qty": 1,
        "unit": "cup"
       }
      },
@@ -4517,36 +4518,36 @@
    },
    {
     "title": "Char the vegetables",
-    "text": "Broil, flipping everything halfway, until well charred in spots, about 15 minutes.",
+    "text": "Broil until well charred in spots, about 15 minutes. Flip everything halfway through.",
     "timer": 15
    },
    {
     "title": "Steam the poblanos",
-    "text": "Move the poblanos to a small bowl, cover tightly with plastic wrap (or seal them in a bag) and let them steam for 5 minutes.",
+    "text": "Put the poblanos in a small bowl, cover tightly with plastic wrap (or seal them in a bag) and let them steam for 5 minutes.",
     "timer": 5
    },
    {
     "title": "Blend the sauce",
-    "text": "Peel the poblanos and discard the skins. Put them in a blender with the tomatillos, jalapeño and garlic, scraping in all the caramelized juices from the pan, which carry a lot of flavor. Add {cilantro} and blend until smooth."
-   },
-   {
-    "title": "Heat the oven",
-    "text": "Heat the oven to 165°C / 145°C fan / gas 3 (325°F)."
+    "text": "Peel the poblanos and throw away the skins. Blend them with the tomatillos, jalapeño and garlic. Scrape in all the pan juices too, because they carry a lot of flavor. Add {cilantro} and blend until smooth."
    },
    {
     "title": "Brown the pork",
-    "text": "Heat {oil2} in a large Dutch oven over medium. Season {pork} with salt and pepper. Brown half of it, turning now and then, about 5 minutes, then move to a plate and repeat with the rest.",
+    "text": "Heat {oil2} in a large skillet over medium-high. Season {pork} with salt and pepper. Brown it in two batches, about 5 minutes each, and move it into the slow cooker.",
     "timer": 5
    },
    {
-    "title": "Build the stew",
-    "text": "Add {onion} to the empty pot and cook, stirring occasionally, until softened, about 3 minutes. Stir in {cumin} and {oregano} for 1 minute until fragrant. Return the pork and any juices, pour in {broth} and the tomatillo sauce, and season with salt and pepper.",
+    "title": "Soften the onion",
+    "text": "Add {onion} to the skillet and cook until soft, about 3 minutes. Stir in {cumin} and {oregano} and cook for 1 minute, until fragrant. Pour in {broth} and scrape up the browned bits. Pour it all over the pork.",
     "timer": 3
    },
    {
-    "title": "Braise",
-    "text": "Bring to a boil, cover and move to the oven. Braise until the pork is very tender, about 1½ hours. Taste and adjust the salt and pepper.",
-    "timer": 90
+    "title": "Slow cook",
+    "text": "Stir in the tomatillo sauce and season lightly with salt and pepper. Cover and cook until the pork is very tender, 6–7 hours on LOW or 3½–4 hours on HIGH.",
+    "timer": 390
+   },
+   {
+    "title": "Finish",
+    "text": "If the sauce is thin, take the lid off and cook on HIGH for the last 20–30 minutes. Skim off any fat, then taste and adjust the salt and pepper."
    },
    {
     "title": "Serve",
@@ -4554,17 +4555,27 @@
    }
   ],
   "tips": [
+   "The broth is cut to 1 cup because a slow cooker doesn't let liquid boil off the way the oven does.",
+   "In a rush? You can skip browning the pork, but the stew will have less depth.",
    "Pick tomatillos that are plump, firm and unblemished. Soft ones are overripe.",
    "No poblanos? Anaheim or Cubanelle peppers work instead.",
    "Sweet onion is used on purpose: its extra sugar balances the tart tomatillos."
   ],
   "makeAhead": [
    {
+    "title": "Prep the night before",
+    "text": "Make the sauce and brown the pork. Chill them separately, then load the slow cooker in the morning. Add about 30 minutes to the cook time."
+   },
+   {
+    "title": "Freeze",
+    "text": "Cool completely and freeze for up to 3 months. Thaw overnight in the fridge."
+   },
+   {
     "title": "Leftovers",
     "text": "Tuck leftover chile verde into warm tortillas for tacos the next day."
    }
   ],
-  "source": "NYT Cooking (Kay Chun)",
+  "source": "Adapted from NYT Cooking (Kay Chun)",
   "image": "img/pork-chile-verde.jpg",
   "added": "2026-10-13"
  },
