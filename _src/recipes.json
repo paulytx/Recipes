@@ -10132,6 +10132,23 @@
       }
      },
      {
+      "key": "butter",
+      "qty": 28,
+      "unit": "g",
+      "name": "unsalted butter, for basting",
+      "short": "butter",
+      "us": {
+       "qty": 2,
+       "unit": "tbsp"
+      }
+     },
+     {
+      "key": "garlic",
+      "qty": 2,
+      "name": "garlic cloves, smashed (Bases A and B)",
+      "short": "smashed garlic cloves"
+     },
+     {
       "name": "Kosher salt"
      }
     ]
@@ -10143,7 +10160,7 @@
       "key": "oil1",
       "qty": 30,
       "unit": "ml",
-      "name": "extra-virgin olive oil (Base A or B)",
+      "name": "extra-virgin olive oil (Base B or C)",
       "short": "olive oil",
       "us": {
        "qty": 2,
@@ -10156,7 +10173,35 @@
     ]
    },
    {
-    "name": "Base A — Mexican: charred corn & poblano",
+    "name": "Base A — Maine: bacon & crispy potatoes",
+    "items": [
+     {
+      "key": "potatoes",
+      "qty": 450,
+      "unit": "g",
+      "name": "baby potatoes, halved",
+      "short": "potatoes",
+      "us": {
+       "qty": 1,
+       "unit": "lb"
+      }
+     },
+     {
+      "key": "bacon",
+      "qty": 4,
+      "name": "slices thick-cut bacon, diced",
+      "short": "bacon"
+     },
+     {
+      "key": "chives",
+      "qty": 1,
+      "name": "small bunch fresh chives, snipped",
+      "short": "chives"
+     }
+    ]
+   },
+   {
+    "name": "Base B — Mexican: charred corn & poblano",
     "items": [
      {
       "key": "corn",
@@ -10184,7 +10229,7 @@
     ]
    },
    {
-    "name": "Base B — Asian: ginger-soy shiitakes",
+    "name": "Base C — Asian: ginger-soy shiitakes",
     "items": [
      {
       "key": "shiitake",
@@ -10200,7 +10245,7 @@
      {
       "key": "ginger",
       "qty": 1,
-      "name": "1-inch knob fresh ginger, minced",
+      "name": "1-inch knob fresh ginger, minced, plus 3 thin slices for basting (or 2 tsp jarred ginger paste; ¼ tsp ground ginger as a last resort)",
       "short": "ginger"
      },
      {
@@ -10215,34 +10260,6 @@
       }
      }
     ]
-   },
-   {
-    "name": "Base C — Maine: bacon & crispy potatoes",
-    "items": [
-     {
-      "key": "potatoes",
-      "qty": 450,
-      "unit": "g",
-      "name": "baby potatoes, halved",
-      "short": "potatoes",
-      "us": {
-       "qty": 1,
-       "unit": "lb"
-      }
-     },
-     {
-      "key": "bacon",
-      "qty": 4,
-      "name": "slices thick-cut bacon, diced",
-      "short": "bacon"
-     },
-     {
-      "key": "chives",
-      "qty": 1,
-      "name": "small bunch fresh chives, snipped",
-      "short": "chives"
-     }
-    ]
    }
   ],
   "steps": [
@@ -10251,19 +10268,19 @@
     "text": "Pull off the small tough side muscle from each of the {scallops}. Pat very dry, then lay on paper towels in the fridge, uncovered, while you make the base. Line a plate with paper towels and keep it by the stove."
    },
    {
-    "title": "2A · Mexican base",
+    "title": "2A · Maine base",
+    "text": "Boil {potatoes} in salted water until just tender, 10–12 minutes, then drain. Meanwhile, cook {bacon} in a large frying pan over medium until crisp, 6–8 minutes; lift out and leave the fat in the pan. Add the potatoes cut side down and cook until golden and crisp, 5–6 minutes. Toss with the bacon and {chives}, and season with salt and pepper.",
+    "timer": 12
+   },
+   {
+    "title": "2B · Mexican base",
     "text": "Heat {oil1} in a large frying pan over medium-high. Cook {poblano} for 3 minutes. Add {corn}, spread it out and leave it alone for 3–4 minutes to char, then stir and char again. Off the heat, stir in the zest and juice of {lime} and season with salt and pepper.",
     "timer": 10
    },
    {
-    "title": "2B · Asian base",
-    "text": "Heat {oil1} in a large frying pan over medium-high. Add {shiitake} in one layer and leave them alone for 3 minutes to brown, then stir and cook until golden, 2 minutes more. Add {ginger} and stir 30 seconds. Add {soy} and 2 tablespoons water and toss until the mushrooms are glazed, about 30 seconds. Season with pepper (skip the salt — the soy is salty).",
+    "title": "2C · Asian base",
+    "text": "Heat {oil1} in a large frying pan over medium-high. Add {shiitake} in one layer and leave them alone for 3 minutes to brown, then stir and cook until golden, 2 minutes more. Add {ginger} and stir 30 seconds (if using ground ginger, stir it in with the soy instead — it burns fast on its own). Add {soy} and 2 tablespoons water and toss until the mushrooms are glazed, about 30 seconds. Season with pepper (skip the salt — the soy is salty).",
     "timer": 6
-   },
-   {
-    "title": "2C · Maine base",
-    "text": "Boil {potatoes} in salted water until just tender, 10–12 minutes, then drain. Meanwhile, cook {bacon} in a large frying pan over medium until crisp, 6–8 minutes; lift out and leave the fat in the pan. Add the potatoes cut side down and cook until golden and crisp, 5–6 minutes. Toss with the bacon and {chives}, and season with salt and pepper.",
-    "timer": 12
    },
    {
     "title": "Score and season",
@@ -10271,7 +10288,7 @@
    },
    {
     "title": "Sear the scallops",
-    "text": "In a 9- or 10-inch carbon steel pan, heat {oil2} over medium until shimmering. Add the scallops without crowding, working in batches if needed. Don't move them — sear 4–5 minutes until a deep golden crust forms and they release easily. Flip, cook a few seconds more, then drain on the paper towels.",
+    "text": "In a 9- or 10-inch carbon steel pan, heat {oil2} over medium until shimmering. Add the scallops without crowding, working in batches if needed. Don't move them — sear 3½–4 minutes until a deep golden crust forms and they release easily. Flip, add {butter} and the aromatics for your base — {garlic} for A or B, the reserved ginger slices for C — then tilt the pan and spoon the foaming butter over the scallops for 30–60 seconds. For B, squeeze a little lime into the butter at the end. For C, take the pan off the heat and add a few drops of soy sauce (or spoon over a little of the mushroom glaze). Drain on the paper towels.",
     "timer": 5
    },
    {
@@ -10285,7 +10302,8 @@
    "Dry is everything: moisture is what stops a crust from forming. The uncovered rest in the fridge helps.",
    "Leave them alone. Scallops stick at first and release on their own once the crust is set — if one won't budge, give it another 30 seconds.",
    "Almost all the cooking happens on the first side. They're done when the sides are opaque nearly to the top with a slightly translucent center; overcooked scallops turn rubbery.",
-   "Base A: a squeeze of lime over the scallops ties it together. Base C: a knob of butter added to the scallop pan for the last minute, spooned over the tops, is very Maine."
+   "Add the butter only after the flip — earlier, it burns at searing heat. Use smashed whole garlic cloves, not minced; minced garlic scorches in seconds and turns bitter.",
+   "For Base C, don't baste with soy itself — its sugar scorches and the liquid softens the crust. Butter and ginger slices first, soy off the heat."
   ],
   "source": "Chef Tom Colicchio (scallop method); bases adapted",
   "image": "img/seared-scallops-three-ways.jpg",
