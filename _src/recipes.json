@@ -10092,5 +10092,161 @@
   "source": "Philips Pasta Maker recipe booklet",
   "image": "img/philips-pasta-recipes.jpg",
   "added": "2026-11-08"
+ },
+ {
+  "id": "seared-scallops-cabbage-apples-leeks",
+  "title": "Seared Scallops with Cabbage, Apples and Leeks",
+  "category": "Mains",
+  "description": "Tom Colicchio's simple Long Island sea scallops, seared and served over a warm cabbage, apple and leek salad with ginger and caraway.",
+  "servings": 4,
+  "servingWord": "servings",
+  "yieldNote": "Serves 4 (3 scallops each)",
+  "activeTime": 30,
+  "totalTime": 45,
+  "equipment": [
+   "Large sauté or frying pan",
+   "9- or 10-inch carbon steel frying pan",
+   "Sharp knife",
+   "Paper towels"
+  ],
+  "groups": [
+   {
+    "name": "Cabbage salad",
+    "items": [
+     {
+      "key": "oil1",
+      "qty": 45,
+      "unit": "ml",
+      "name": "extra-virgin olive oil",
+      "short": "olive oil",
+      "us": {
+       "qty": 3,
+       "unit": "tbsp"
+      }
+     },
+     {
+      "key": "leek",
+      "qty": 1,
+      "name": "leek, white part only, sliced into half-moons",
+      "short": "leek"
+     },
+     {
+      "key": "cabbage",
+      "qty": 1,
+      "name": "small head green cabbage, sliced or shredded",
+      "short": "cabbage"
+     },
+     {
+      "key": "carrot",
+      "qty": 1,
+      "name": "small carrot, finely diced",
+      "short": "carrot"
+     },
+     {
+      "key": "apple",
+      "qty": 1,
+      "name": "red apple, finely diced",
+      "short": "apple"
+     },
+     {
+      "key": "caraway",
+      "qty": 0.5,
+      "unit": "tsp",
+      "name": "caraway seeds",
+      "short": "caraway seeds"
+     },
+     {
+      "key": "butter",
+      "qty": 14,
+      "unit": "g",
+      "name": "unsalted butter",
+      "short": "butter",
+      "us": {
+       "qty": 1,
+       "unit": "tbsp"
+      }
+     },
+     {
+      "key": "ginger",
+      "qty": 1,
+      "name": "¼-inch knob fresh ginger, finely diced",
+      "short": "ginger"
+     },
+     {
+      "name": "Kosher salt"
+     },
+     {
+      "name": "Freshly ground black pepper"
+     }
+    ]
+   },
+   {
+    "name": "Scallops",
+    "items": [
+     {
+      "key": "scallops",
+      "qty": 12,
+      "name": "large diver or jumbo sea scallops",
+      "short": "scallops"
+     },
+     {
+      "key": "oil2",
+      "qty": 45,
+      "unit": "ml",
+      "name": "extra-virgin olive oil",
+      "short": "olive oil",
+      "us": {
+       "qty": 3,
+       "unit": "tbsp"
+      }
+     },
+     {
+      "name": "Kosher salt"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "title": "Soften the leeks",
+    "text": "In a large sauté or frying pan, heat {oil1} over medium-low until shimmering. Add {leek} and a pinch of salt and cook until softened, 1–2 minutes.",
+    "timer": 2
+   },
+   {
+    "title": "Cook the vegetables",
+    "text": "Add {cabbage} and {carrot}, season with salt and pepper, stir and cook 3–4 minutes.",
+    "timer": 4
+   },
+   {
+    "title": "Add apple and caraway",
+    "text": "Stir in {apple} and {caraway}. Cook until the cabbage is slightly wilted and just starting to caramelize, about 5 minutes. Don't let it burn.",
+    "timer": 5
+   },
+   {
+    "title": "Finish the salad",
+    "text": "Keep the heat low. Season with salt and pepper, add {butter} and {ginger}, and stir until the butter melts, 2–3 minutes. Take off the heat and season to taste.",
+    "timer": 3
+   },
+   {
+    "title": "Prep the scallops",
+    "text": "Line a plate with paper towels and keep it by the stove. Pat {scallops} dry and season with salt. Score both sides in a crosshatch pattern with a sharp knife."
+   },
+   {
+    "title": "Sear the scallops",
+    "text": "In a 9- or 10-inch carbon steel pan, heat {oil2} over medium until shimmering. Add the scallops without crowding, working in batches if needed. Sear 4–5 minutes, flip and cook a few seconds more, then drain on the paper towels.",
+    "timer": 5
+   },
+   {
+    "title": "Serve",
+    "text": "Divide the cabbage salad among 4 plates, top with the scallops and serve right away."
+   }
+  ],
+  "tips": [
+   "Pat the scallops very dry before seasoning — moisture stops a good crust from forming.",
+   "Most of the cooking happens on the first side; the second side only needs a few seconds."
+  ],
+  "source": "Chef Tom Colicchio",
+  "image": "img/seared-scallops-cabbage-apples-leeks.jpg",
+  "added": "2026-11-21"
  }
 ]
