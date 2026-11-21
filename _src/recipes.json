@@ -10094,99 +10094,30 @@
   "added": "2026-11-08"
  },
  {
-  "id": "seared-scallops-cabbage-apples-leeks",
-  "title": "Seared Scallops with Cabbage, Apples and Leeks",
+  "id": "seared-scallops-three-ways",
+  "title": "Seared Scallops Three Ways",
   "category": "Mains",
-  "description": "Tom Colicchio's simple Long Island sea scallops, seared and served over a warm cabbage, apple and leek salad with ginger and caraway.",
+  "description": "Tom Colicchio's method for perfectly seared sea scallops, served over your choice of three quick 3-ingredient bases: Mexican, Asian or Maine.",
   "servings": 4,
   "servingWord": "servings",
   "yieldNote": "Serves 4 (3 scallops each)",
   "activeTime": 30,
   "totalTime": 45,
   "equipment": [
-   "Large sauté or frying pan",
    "9- or 10-inch carbon steel frying pan",
+   "Large frying pan (for the base)",
+   "Saucepan (Base C only)",
    "Sharp knife",
    "Paper towels"
   ],
   "groups": [
-   {
-    "name": "Cabbage salad",
-    "items": [
-     {
-      "key": "oil1",
-      "qty": 45,
-      "unit": "ml",
-      "name": "extra-virgin olive oil",
-      "short": "olive oil",
-      "us": {
-       "qty": 3,
-       "unit": "tbsp"
-      }
-     },
-     {
-      "key": "leek",
-      "qty": 1,
-      "name": "leek, white part only, sliced into half-moons",
-      "short": "leek"
-     },
-     {
-      "key": "cabbage",
-      "qty": 1,
-      "name": "small head green cabbage, sliced or shredded",
-      "short": "cabbage"
-     },
-     {
-      "key": "carrot",
-      "qty": 1,
-      "name": "small carrot, finely diced",
-      "short": "carrot"
-     },
-     {
-      "key": "apple",
-      "qty": 1,
-      "name": "red apple, finely diced",
-      "short": "apple"
-     },
-     {
-      "key": "caraway",
-      "qty": 0.5,
-      "unit": "tsp",
-      "name": "caraway seeds",
-      "short": "caraway seeds"
-     },
-     {
-      "key": "butter",
-      "qty": 14,
-      "unit": "g",
-      "name": "unsalted butter",
-      "short": "butter",
-      "us": {
-       "qty": 1,
-       "unit": "tbsp"
-      }
-     },
-     {
-      "key": "ginger",
-      "qty": 1,
-      "name": "¼-inch knob fresh ginger, finely diced",
-      "short": "ginger"
-     },
-     {
-      "name": "Kosher salt"
-     },
-     {
-      "name": "Freshly ground black pepper"
-     }
-    ]
-   },
    {
     "name": "Scallops",
     "items": [
      {
       "key": "scallops",
       "qty": 12,
-      "name": "large diver or jumbo sea scallops",
+      "name": "large diver or jumbo sea scallops, dry-packed",
       "short": "scallops"
      },
      {
@@ -10204,49 +10135,160 @@
       "name": "Kosher salt"
      }
     ]
+   },
+   {
+    "name": "Pantry (for the base)",
+    "items": [
+     {
+      "key": "oil1",
+      "qty": 30,
+      "unit": "ml",
+      "name": "extra-virgin olive oil (Base A or B)",
+      "short": "olive oil",
+      "us": {
+       "qty": 2,
+       "unit": "tbsp"
+      }
+     },
+     {
+      "name": "Kosher salt and freshly ground black pepper"
+     }
+    ]
+   },
+   {
+    "name": "Base A — Mexican: charred corn & poblano",
+    "items": [
+     {
+      "key": "corn",
+      "qty": 450,
+      "unit": "g",
+      "name": "corn kernels, fresh (about 4 ears) or frozen and thawed",
+      "short": "corn",
+      "us": {
+       "qty": 3,
+       "unit": "cup"
+      }
+     },
+     {
+      "key": "poblano",
+      "qty": 2,
+      "name": "poblano peppers, seeded and diced",
+      "short": "poblanos"
+     },
+     {
+      "key": "lime",
+      "qty": 1,
+      "name": "lime, zested and juiced",
+      "short": "lime"
+     }
+    ]
+   },
+   {
+    "name": "Base B — Asian: ginger-soy shiitakes",
+    "items": [
+     {
+      "key": "shiitake",
+      "qty": 225,
+      "unit": "g",
+      "name": "shiitake mushrooms, stems removed, sliced",
+      "short": "shiitakes",
+      "us": {
+       "qty": 8,
+       "unit": "oz"
+      }
+     },
+     {
+      "key": "ginger",
+      "qty": 1,
+      "name": "1-inch knob fresh ginger, minced",
+      "short": "ginger"
+     },
+     {
+      "key": "soy",
+      "qty": 30,
+      "unit": "ml",
+      "name": "soy sauce",
+      "short": "soy sauce",
+      "us": {
+       "qty": 2,
+       "unit": "tbsp"
+      }
+     }
+    ]
+   },
+   {
+    "name": "Base C — Maine: bacon & crispy potatoes",
+    "items": [
+     {
+      "key": "potatoes",
+      "qty": 450,
+      "unit": "g",
+      "name": "baby potatoes, halved",
+      "short": "potatoes",
+      "us": {
+       "qty": 1,
+       "unit": "lb"
+      }
+     },
+     {
+      "key": "bacon",
+      "qty": 4,
+      "name": "slices thick-cut bacon, diced",
+      "short": "bacon"
+     },
+     {
+      "key": "chives",
+      "qty": 1,
+      "name": "small bunch fresh chives, snipped",
+      "short": "chives"
+     }
+    ]
    }
   ],
   "steps": [
    {
-    "title": "Soften the leeks",
-    "text": "In a large sauté or frying pan, heat {oil1} over medium-low until shimmering. Add {leek} and a pinch of salt and cook until softened, 1–2 minutes.",
-    "timer": 2
-   },
-   {
-    "title": "Cook the vegetables",
-    "text": "Add {cabbage} and {carrot}, season with salt and pepper, stir and cook 3–4 minutes.",
-    "timer": 4
-   },
-   {
-    "title": "Add apple and caraway",
-    "text": "Stir in {apple} and {caraway}. Cook until the cabbage is slightly wilted and just starting to caramelize, about 5 minutes. Don't let it burn.",
-    "timer": 5
-   },
-   {
-    "title": "Finish the salad",
-    "text": "Keep the heat low. Season with salt and pepper, add {butter} and {ginger}, and stir until the butter melts, 2–3 minutes. Take off the heat and season to taste.",
-    "timer": 3
-   },
-   {
     "title": "Prep the scallops",
-    "text": "Line a plate with paper towels and keep it by the stove. Pat {scallops} dry and season with salt. Score both sides in a crosshatch pattern with a sharp knife."
+    "text": "Pull off the small tough side muscle from each of the {scallops}. Pat very dry, then lay on paper towels in the fridge, uncovered, while you make the base. Line a plate with paper towels and keep it by the stove."
+   },
+   {
+    "title": "2A · Mexican base",
+    "text": "Heat {oil1} in a large frying pan over medium-high. Cook {poblano} for 3 minutes. Add {corn}, spread it out and leave it alone for 3–4 minutes to char, then stir and char again. Off the heat, stir in the zest and juice of {lime} and season with salt and pepper.",
+    "timer": 10
+   },
+   {
+    "title": "2B · Asian base",
+    "text": "Heat {oil1} in a large frying pan over medium-high. Add {shiitake} in one layer and leave them alone for 3 minutes to brown, then stir and cook until golden, 2 minutes more. Add {ginger} and stir 30 seconds. Add {soy} and 2 tablespoons water and toss until the mushrooms are glazed, about 30 seconds. Season with pepper (skip the salt — the soy is salty).",
+    "timer": 6
+   },
+   {
+    "title": "2C · Maine base",
+    "text": "Boil {potatoes} in salted water until just tender, 10–12 minutes, then drain. Meanwhile, cook {bacon} in a large frying pan over medium until crisp, 6–8 minutes; lift out and leave the fat in the pan. Add the potatoes cut side down and cook until golden and crisp, 5–6 minutes. Toss with the bacon and {chives}, and season with salt and pepper.",
+    "timer": 12
+   },
+   {
+    "title": "Score and season",
+    "text": "Pat the scallops dry once more and season with salt. Using a sharp knife, lightly score both flat sides in a crosshatch pattern."
    },
    {
     "title": "Sear the scallops",
-    "text": "In a 9- or 10-inch carbon steel pan, heat {oil2} over medium until shimmering. Add the scallops without crowding, working in batches if needed. Sear 4–5 minutes, flip and cook a few seconds more, then drain on the paper towels.",
+    "text": "In a 9- or 10-inch carbon steel pan, heat {oil2} over medium until shimmering. Add the scallops without crowding, working in batches if needed. Don't move them — sear 4–5 minutes until a deep golden crust forms and they release easily. Flip, cook a few seconds more, then drain on the paper towels.",
     "timer": 5
    },
    {
     "title": "Serve",
-    "text": "Divide the cabbage salad among 4 plates, top with the scallops and serve right away."
+    "text": "Divide your base among 4 plates, top each with 3 scallops and serve right away."
    }
   ],
   "tips": [
-   "Pat the scallops very dry before seasoning — moisture stops a good crust from forming.",
-   "Most of the cooking happens on the first side; the second side only needs a few seconds."
+   "Make one base, not all three — pick A, B or C at step 2. Each option is 3 ingredients plus pantry oil, salt and pepper.",
+   "Buy dry-packed scallops. Wet-packed ones are treated with a solution that leaks water in the pan, so they steam instead of browning.",
+   "Dry is everything: moisture is what stops a crust from forming. The uncovered rest in the fridge helps.",
+   "Leave them alone. Scallops stick at first and release on their own once the crust is set — if one won't budge, give it another 30 seconds.",
+   "Almost all the cooking happens on the first side. They're done when the sides are opaque nearly to the top with a slightly translucent center; overcooked scallops turn rubbery.",
+   "Base A: a squeeze of lime over the scallops ties it together. Base C: a knob of butter added to the scallop pan for the last minute, spooned over the tops, is very Maine."
   ],
-  "source": "Chef Tom Colicchio",
-  "image": "img/seared-scallops-cabbage-apples-leeks.jpg",
+  "source": "Chef Tom Colicchio (scallop method); bases adapted",
+  "image": "img/seared-scallops-three-ways.jpg",
   "added": "2026-11-21"
  }
 ]
